@@ -34,21 +34,24 @@ public class menuCliente extends javax.swing.JFrame {
         botaoPerfil = new javax.swing.JButton();
         botaoMensagem = new javax.swing.JButton();
         botaoProjeto = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Pro4tech");
+        setPreferredSize(new java.awt.Dimension(806, 451));
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setPreferredSize(new java.awt.Dimension(800, 451));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setForeground(new java.awt.Color(204, 204, 204));
 
-        botaoPerfil.setBackground(new java.awt.Color(255, 153, 51));
-        botaoPerfil.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        botaoPerfil.setForeground(new java.awt.Color(255, 255, 255));
+        botaoPerfil.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        botaoPerfil.setForeground(new java.awt.Color(255, 153, 51));
         botaoPerfil.setText("Perfil");
-        botaoPerfil.setBorder(null);
+        botaoPerfil.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         botaoPerfil.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         botaoPerfil.addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentResized(java.awt.event.ComponentEvent evt) {
@@ -61,65 +64,95 @@ public class menuCliente extends javax.swing.JFrame {
             }
         });
 
-        botaoMensagem.setBackground(new java.awt.Color(255, 153, 51));
-        botaoMensagem.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        botaoMensagem.setForeground(new java.awt.Color(255, 255, 255));
+        botaoMensagem.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        botaoMensagem.setForeground(new java.awt.Color(255, 153, 51));
         botaoMensagem.setText("Mensagens ");
-        botaoMensagem.setBorder(null);
+        botaoMensagem.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         botaoMensagem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoMensagemActionPerformed(evt);
             }
         });
 
-        botaoProjeto.setBackground(new java.awt.Color(255, 153, 51));
-        botaoProjeto.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        botaoProjeto.setForeground(new java.awt.Color(255, 255, 255));
+        botaoProjeto.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        botaoProjeto.setForeground(new java.awt.Color(255, 153, 51));
         botaoProjeto.setText("Projetos");
-        botaoProjeto.setBorder(null);
+        botaoProjeto.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         botaoProjeto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoProjetoActionPerformed(evt);
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel1.setText("Menu");
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/logoResize.png"))); // NOI18N
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(135, 135, 135)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(botaoMensagem, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botaoProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botaoPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(151, Short.MAX_VALUE))
+                .addContainerGap(266, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(botaoMensagem, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(botaoProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(botaoPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(254, 254, 254))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(355, 355, 355))))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(356, 356, 356)
+                .addComponent(jLabel2)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(botaoPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(68, 68, 68)
+                .addComponent(botaoPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(botaoProjeto, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
+                .addComponent(botaoProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(botaoMensagem, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(botaoMensagem, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(74, 74, 74))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(147, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20))
         );
 
-        getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         pack();
         setLocationRelativeTo(null);
@@ -191,6 +224,8 @@ public class menuCliente extends javax.swing.JFrame {
     private javax.swing.JButton botaoMensagem;
     private javax.swing.JButton botaoPerfil;
     private javax.swing.JButton botaoProjeto;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables

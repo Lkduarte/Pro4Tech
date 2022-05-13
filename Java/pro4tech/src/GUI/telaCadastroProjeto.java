@@ -47,86 +47,114 @@ public class telaCadastroProjeto extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        campoNomeProjeto = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
+        campoNomeProjeto = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         campoNomeEmpresa = new javax.swing.JTextField();
-        botaoCadastrarProjeto = new javax.swing.JButton();
-        botaoLimpar = new javax.swing.JButton();
         botaoVoltar = new javax.swing.JButton();
+        botaoLimpar = new javax.swing.JButton();
+        botaoCadastrarProjeto = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 153, 51));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setMaximumSize(new java.awt.Dimension(1280, 720));
+        setMinimumSize(new java.awt.Dimension(1280, 720));
+        setPreferredSize(new java.awt.Dimension(1280, 720));
         setResizable(false);
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 102, 0));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.setMinimumSize(new java.awt.Dimension(549, 297));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 153, 51));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Cadastro de Projeto");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 30, 549, -1));
 
-        jLabel2.setText("Nome do projeto:");
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel2.setText("Nome do projeto");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, -1, -1));
 
-        jLabel3.setText("Nome da empresa:");
-
-        botaoCadastrarProjeto.setText("Cadastrar");
-        botaoCadastrarProjeto.addActionListener(new java.awt.event.ActionListener() {
+        campoNomeProjeto.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        campoNomeProjeto.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 153, 51)));
+        campoNomeProjeto.setMinimumSize(new java.awt.Dimension(64, 30));
+        campoNomeProjeto.setPreferredSize(new java.awt.Dimension(64, 30));
+        campoNomeProjeto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botaoCadastrarProjetoActionPerformed(evt);
+                campoNomeProjetoActionPerformed(evt);
             }
         });
+        jPanel1.add(campoNomeProjeto, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 160, 280, -1));
 
-        botaoLimpar.setText("Limpar");
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel3.setText("Nome da empresa");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 220, -1, -1));
 
+        campoNomeEmpresa.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        campoNomeEmpresa.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 153, 31)));
+        campoNomeEmpresa.setMinimumSize(new java.awt.Dimension(64, 30));
+        campoNomeEmpresa.setPreferredSize(new java.awt.Dimension(64, 30));
+        campoNomeEmpresa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoNomeEmpresaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(campoNomeEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 250, 280, -1));
+
+        botaoVoltar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        botaoVoltar.setForeground(new java.awt.Color(255, 153, 51));
         botaoVoltar.setText("Voltar");
+        botaoVoltar.setPreferredSize(new java.awt.Dimension(100, 30));
         botaoVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoVoltarActionPerformed(evt);
             }
         });
+        jPanel1.add(botaoVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 380, -1, -1));
+
+        botaoLimpar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        botaoLimpar.setForeground(new java.awt.Color(255, 153, 51));
+        botaoLimpar.setText("Limpar");
+        botaoLimpar.setPreferredSize(new java.awt.Dimension(100, 30));
+        botaoLimpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoLimparActionPerformed(evt);
+            }
+        });
+        jPanel1.add(botaoLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 380, -1, -1));
+
+        botaoCadastrarProjeto.setBackground(new java.awt.Color(255, 153, 51));
+        botaoCadastrarProjeto.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        botaoCadastrarProjeto.setForeground(new java.awt.Color(255, 255, 255));
+        botaoCadastrarProjeto.setText("Cadastrar");
+        botaoCadastrarProjeto.setPreferredSize(new java.awt.Dimension(100, 30));
+        botaoCadastrarProjeto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoCadastrarProjetoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(botaoCadastrarProjeto, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 380, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 509, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2)
-                            .addComponent(campoNomeProjeto, javax.swing.GroupLayout.DEFAULT_SIZE, 267, Short.MAX_VALUE)
-                            .addComponent(campoNomeEmpresa))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(botaoVoltar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(botaoLimpar)
-                        .addGap(28, 28, 28)
-                        .addComponent(botaoCadastrarProjeto)
-                        .addGap(28, 28, 28))))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(jLabel1)
-                .addGap(60, 60, 60)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(campoNomeProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(campoNomeEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(botaoCadastrarProjeto)
-                    .addComponent(botaoLimpar)
-                    .addComponent(botaoVoltar))
-                .addGap(34, 34, 34))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 451, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -164,6 +192,18 @@ public class telaCadastroProjeto extends javax.swing.JFrame {
         dispose();
         
     }//GEN-LAST:event_botaoVoltarActionPerformed
+
+    private void botaoLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoLimparActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botaoLimparActionPerformed
+
+    private void campoNomeEmpresaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNomeEmpresaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoNomeEmpresaActionPerformed
+
+    private void campoNomeProjetoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNomeProjetoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoNomeProjetoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -210,5 +250,6 @@ public class telaCadastroProjeto extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
