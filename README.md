@@ -22,7 +22,7 @@
 | Sprint | Entrega	| Status | Histórico |
 | :-----: | :-----: | :-----: | :-----: |
 | 01 | 14/04/2022 | Completo | [Ver Relatório](https://github.com/TechDriversFatec/Pro4Tech/tree/main/Planejamento/Sprint1) |
-| 02 | 15/05/2022 | Pendente | - |
+| 02 | 15/05/2022 | Em andamento | [Ver Relatório](https://github.com/TechDriversFatec/Pro4Tech/tree/main/Planejamento/Sprint2) |
 | 03 | 05/06/2022 | Pendente | - |
   
   → [Voltar ao topo](#topo)
