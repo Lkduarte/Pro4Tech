@@ -65,7 +65,7 @@ https://user-images.githubusercontent.com/87658431/163490556-19a16404-69ab-44b5-
 <p align="justify">O gráfico de Burndown é um método de visualização do andamento da sprint muito comum nos métodos ágeis. Ele possui a vantagem de permitir a rápida visualização, por todo o time de desenvolvimento, do andamento das atividades, sem necessariamente entrar nas histórias de usuário como no backlog da sprint.
 <br>
 <br>
-Neste gráfico de Burndown foi retratada o trabalho realizado pelo o time.
+Neste gráfico de Burndown foi retratado o trabalho realizado pelo time.
 <br></p>
 <p align="justify">Foram necessárias pesquisas e estudos para a realização das tarefas.</p>
   
