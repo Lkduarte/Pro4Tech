@@ -22,7 +22,7 @@
 | Sprint | Entrega	| Status | Histórico |
 | :-----: | :-----: | :-----: | :-----: |
 | 01 | 14/04/2022 | Completo | [Ver Relatório](https://github.com/TechDriversFatec/Pro4Tech/tree/main/Planejamento/Sprint1) |
-| 02 | 15/05/2022 | Em andamento | [Ver Relatório](https://github.com/TechDriversFatec/Pro4Tech/tree/main/Planejamento/Sprint2) |
+| 02 | 15/05/2022 | Completo | [Ver Relatório](https://github.com/TechDriversFatec/Pro4Tech/tree/main/Planejamento/Sprint2) |
 | 03 | 05/06/2022 | Pendente | - |
   
   → [Voltar ao topo](#topo)
@@ -33,20 +33,19 @@
 
   ### Backlog do Produto
   
-![backlog](https://user-images.githubusercontent.com/86115352/168405907-37630155-5152-4ce6-9033-3667406be3db.png)
+![backlog_atualizado](https://user-images.githubusercontent.com/86115352/168406990-7cfd74f7-2ecb-46ea-960e-386e0b1bca4d.png)
 
-  
   ### Backlog das Sprints
   
 ![Sprint1](https://user-images.githubusercontent.com/86115352/162644485-e3f1fc81-7183-45cb-b85d-5277d77ad011.png)
 
   <br>
   
-![Sprint2](https://user-images.githubusercontent.com/86115352/162644475-b16c055b-2c21-486e-b082-6b674ea92020.png)
+![Sprint2](https://user-images.githubusercontent.com/86115352/168406803-570cd719-4057-41f8-82b3-da589768cc3f.png)
 
   <br>
   
-![Sprint3](https://user-images.githubusercontent.com/86115352/162644497-b94cd811-3172-4225-8868-5269cf436c85.png)
+![Sprint3](https://user-images.githubusercontent.com/86115352/168406984-2790f4b0-eed0-43b6-8a10-69bc57fec36c.png)
 
   <br>
   
