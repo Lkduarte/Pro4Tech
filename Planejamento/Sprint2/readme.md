@@ -7,7 +7,6 @@
 #### Navegador
 * <a href="#objetivo">Objetivo da Sprint 2</a>
 * <a href="#requisitos">Levantamento de requisitos</a>
-* <a href="#bd">Banco de dados</a>
 * <a href="#java">Plataforma Desktop</a>
 * <a href="#burndown">Burndown</a>
 
