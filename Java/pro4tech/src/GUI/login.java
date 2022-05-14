@@ -125,7 +125,7 @@ public class login extends javax.swing.JFrame {
         botaoEntrar.setForeground(new java.awt.Color(255, 153, 51));
         botaoEntrar.setText("Entrar");
         botaoEntrar.setBorder(null);
-        botaoEntrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botaoEntrar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         botaoEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoEntrarActionPerformed(evt);
