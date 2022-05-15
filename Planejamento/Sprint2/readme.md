@@ -7,6 +7,7 @@
 #### Navegador
 * <a href="#objetivo">Objetivo da Sprint 2</a>
 * <a href="#requisitos">Levantamento de requisitos</a>
+* <a href="#us">User Stories</a>
 * <a href="#java">Plataforma Desktop</a>
 * <a href="#burndown">Burndown</a>
 
@@ -14,20 +15,18 @@
 
 # 📌 Objetivo da Sprint 2 
   
-<p align="justify">Nessa segunda Sprint tivemos como objetivo desenvolver o design e as funcionalidades das telas de cadastro de cliente e projetos; implementar a funcionalidade de cadastro de suporte e administrador; configuração das tela de menu para cada usuário (administrador, cliente e suporte); tambem trabalhamos nas melhorias que foram apontadas no feedback da primeira sprint, sendo elas: alterar a fonte do histórico de mensagem, e inserir o autorefresh nas páginas previamente desenvolvidas.</p>
+<p align="justify">Nessa segunda sprint tivemos como objetivo desenvolver o design e as funcionalidades das telas de cadastro de cliente e projetos; implementar a funcionalidade de cadastro de suporte e administrador; e configuração das tela de menu para cada usuário (administrador, cliente e suporte). Também trabalhamos nas melhorias que foram apontadas no feedback da primeira sprint, sendo elas: alteração da fonte do histórico de mensagem e inserção do autorefresh nas páginas previamente desenvolvidas.</p>
 
 <div align="justify">
-Para a 2ª sprint, nossos objetivos podem ser divididos da seguinte forma:
+Para a segunda sprint, nossos objetivos foram divididos da seguinte forma:
   
 * Validação dos requisitos, das telas desenvolvidas e das sprints;
-  
   
 * Desenvolvimento das telas de menu (administrador, suporte e cliente), cadastro de usuários e projeto, e desenvolvimento da tela e funcionalidade cadastro de login, 
 </div>
   
 * Integração do banco de dados com as telas de cadastro de usuário, projetos e de login.
   
-
 
 → [Voltar ao topo](#topo)
   
@@ -41,8 +40,22 @@ Para darmos continuidade  ao projeto, resolvemos implementar as sugestões dadas
   
 → [Voltar ao topo](#topo)
   
-<span id="bd">
+<span id="us">
 
+# 🔍 User Stories
+  
+  <p align="justify">Utilizamos a estrutura de user stories para definir e organizar os requisitos do nosso sistema. Respondendo algumas perguntas, foi possível construir descrições simples de cada funcionalidade, fracionando os requisitos para poder estimar o esforço necessário para cada objetivo.</p>
+  
+  | Código | Quem       | O que?                                                                                                                                                   | Para                                                |
+| :----: | :--------- | :------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------- |
+|  #01   | Administrador/Suporte | Quer se comunicar diretamente com o cliente | Aproximar o cliente e a empresa
+|  #02   | Cliente | Quer cadastrar informações pertinentes aos projetos dos quais faz parte (nome do projeto, mensagem, assunto, origem da mensagem, profissional responsável pelo projeto) | Centralizar as informações mais importantes em um mesmo lugar |
+|  #03   | Administrador | Quer ter acesso a uma aplicação que seja capaz de armazenar cadastros de clientes, projetos e grupos | Ter controle das informações necessárias à realização de cada projeto |
+|  #04   | Administrador | Quer que a aplicação possibilite a atribuição de diferentes perfis (administrador, suporte e cliente) aos usuários | Limitar o acesso a determinadas informações |
+|  #05   | Administrador/Suporte/Cliente | Quer que a aplicação carregue automaticamente qualquer alteração feita no histórico de mensagens | Ter maior agilidade na obtenção de informações |
+|  #06   | Administrador/Suporte/Cliente | Quer que  a aplicação exiba o histórico de mensagens de forma legível | Facilitar a leitura das informações trocadas |
+  
+→ [Voltar ao topo](#topo)
   
 <span id="java">
 
