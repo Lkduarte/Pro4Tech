@@ -48,11 +48,19 @@ Para darmos continuidade  ao projeto, resolvemos implementar as sugestões dadas
 
 # 🖥 Plataforma Desktop
   
-<p align="justify">Com as informações bem definidas, a equipe passou a elaborar a aplicação desktop na linguagem Java. Devidamente validados os protótipos, a equipe passou a estruturar as interfaces gráficas. </p>
+<p align="justify">A equipe continuou o desenvolvimento do projeto com base nas informações validadas junto ao cliente. Dessa forma, foram feitas alterações apontadas pelo cliente na primeira sprint, e demos continuidade no desenvolvimento das funcionalidades propostas. </p>
   
   
 
-https://user-images.githubusercontent.com/87658431/163490556-19a16404-69ab-44b5-a412-71aa1430eadc.mp4
+
+https://user-images.githubusercontent.com/87658431/168491608-5fe5cef8-ca93-4d63-987f-b802109e1b9e.mp4
+
+
+
+
+
+
+
   
 
 → [Voltar ao topo](#topo)
