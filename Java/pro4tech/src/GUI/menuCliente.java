@@ -34,6 +34,7 @@ public class menuCliente extends javax.swing.JFrame {
         botaoPerfil = new javax.swing.JButton();
         botaoProjeto = new javax.swing.JButton();
         botaoMensagem = new javax.swing.JButton();
+        botaoSair = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menu Cliente");
@@ -47,7 +48,7 @@ public class menuCliente extends javax.swing.JFrame {
         botaoPerfil.setForeground(new java.awt.Color(255, 153, 51));
         botaoPerfil.setText("Perfil");
         botaoPerfil.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(203, 203, 203), 1, true));
-        botaoPerfil.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botaoPerfil.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         botaoPerfil.setFocusPainted(false);
         botaoPerfil.setFocusable(false);
         botaoPerfil.addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -65,7 +66,7 @@ public class menuCliente extends javax.swing.JFrame {
         botaoProjeto.setForeground(new java.awt.Color(255, 153, 51));
         botaoProjeto.setText("Projetos");
         botaoProjeto.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(203, 203, 203), 1, true));
-        botaoProjeto.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botaoProjeto.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         botaoProjeto.setFocusPainted(false);
         botaoProjeto.setFocusable(false);
         botaoProjeto.addActionListener(new java.awt.event.ActionListener() {
@@ -78,12 +79,19 @@ public class menuCliente extends javax.swing.JFrame {
         botaoMensagem.setForeground(new java.awt.Color(255, 153, 51));
         botaoMensagem.setText("Mensagens ");
         botaoMensagem.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(203, 203, 203), 1, true));
-        botaoMensagem.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botaoMensagem.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         botaoMensagem.setFocusPainted(false);
         botaoMensagem.setFocusable(false);
         botaoMensagem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoMensagemActionPerformed(evt);
+            }
+        });
+
+        botaoSair.setText("Sair");
+        botaoSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoSairActionPerformed(evt);
             }
         });
 
@@ -101,7 +109,10 @@ public class menuCliente extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(botaoPerfil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(botaoProjeto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(botaoMensagem, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(botaoMensagem, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(botaoSair)))
                 .addContainerGap(129, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -115,7 +126,9 @@ public class menuCliente extends javax.swing.JFrame {
                 .addComponent(botaoProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(botaoMensagem, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(68, 68, 68))
+                .addGap(40, 40, 40)
+                .addComponent(botaoSair)
+                .addContainerGap())
         );
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
@@ -149,6 +162,12 @@ public class menuCliente extends javax.swing.JFrame {
     private void botaoPerfilComponentResized(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_botaoPerfilComponentResized
         // TODO add your handling code here:
     }//GEN-LAST:event_botaoPerfilComponentResized
+
+    private void botaoSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoSairActionPerformed
+        login sair = new login();
+        sair.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_botaoSairActionPerformed
     
     /**
      * @param args the command line arguments
@@ -190,6 +209,7 @@ public class menuCliente extends javax.swing.JFrame {
     private javax.swing.JButton botaoMensagem;
     private javax.swing.JButton botaoPerfil;
     private javax.swing.JButton botaoProjeto;
+    private javax.swing.JButton botaoSair;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
