@@ -352,9 +352,7 @@ public class telaCadastroAdministrador extends javax.swing.JFrame {
     }//GEN-LAST:event_botaoCadastrarActionPerformed
 
     private void botaoVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoVoltarActionPerformed
-        
-        menuAdm adm = new menuAdm();
-        adm.setVisible(true);
+
         dispose();
         
     }//GEN-LAST:event_botaoVoltarActionPerformed
