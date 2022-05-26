@@ -315,12 +315,7 @@ public class telaCadastroCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_campoLoginActionPerformed
 
     private void botaoVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoVoltarActionPerformed
-        
-        if(Principal.usuarioLogado.getPerfilUsuario() == FuncaoUsuario.SUPORTE.getId()){
-            new menuSuporte().setVisible(true);
-        }else{
-            new menuAdm().setVisible(true);
-        }
+
         dispose();
         
     }//GEN-LAST:event_botaoVoltarActionPerformed
