@@ -154,9 +154,9 @@ public class telaDeUsuarios extends javax.swing.JFrame {
             while (rs.next()) {
                 
                 modelo.addRow(new Object[]{
-                    rs.getString(1).toLowerCase(),
-                    rs.getString(2).toLowerCase(),
-                    rs.getString(3).toLowerCase()
+                    rs.getString(1),
+                    rs.getString(2),
+                    rs.getString(3)
                 });
             }
             
