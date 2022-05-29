@@ -13,7 +13,7 @@
 <span id="sobre">
 
 ## 🚀 Sobre o Projeto
-  > **Status do projeto: Em andamento**
+  > **Status do projeto: Finalizado**
   
   <p align="justify">O projeto tem como objetivo criar uma mensageria, ou seja, uma aplicação que centralize toda troca de informação realizada entre a empresa e o cliente. A proposta se refere à implementação por meio da linguagem Java (Desktop), a partir de um modelo de banco de dados relacional construído com a tecnologia MySQL.</p>
   
@@ -23,7 +23,7 @@
 | :-----: | :-----: | :-----: | :-----: |
 | 01 | 14/04/2022 | Completo | [Ver Relatório](https://github.com/TechDriversFatec/Pro4Tech/tree/main/Planejamento/Sprint1) |
 | 02 | 15/05/2022 | Completo | [Ver Relatório](https://github.com/TechDriversFatec/Pro4Tech/tree/main/Planejamento/Sprint2) |
-| 03 | 05/06/2022 | Pendente | - |
+| 03 | 05/06/2022 | Completo | [Ver Relatório](https://github.com/TechDriversFatec/Pro4Tech/tree/main/Planejamento/Sprint3) |
   
   → [Voltar ao topo](#topo)
   
@@ -33,7 +33,8 @@
 
   ### Backlog do Produto
   
-![backlog_atualizado](https://user-images.githubusercontent.com/86115352/168406990-7cfd74f7-2ecb-46ea-960e-386e0b1bca4d.png)
+![backlog_atualizado](https://user-images.githubusercontent.com/86115352/170886931-e81935c3-f726-4e98-b8a2-df1503471fca.png)
+
 
   ### Backlog das Sprints
   
@@ -45,7 +46,7 @@
 
   <br>
   
-![Sprint3](https://user-images.githubusercontent.com/86115352/168406984-2790f4b0-eed0-43b6-8a10-69bc57fec36c.png)
+![Sprint3](https://user-images.githubusercontent.com/86115352/170886752-29562c1f-5b5b-4b98-a0f0-adebe24f2fde.png)
 
   <br>
   
@@ -72,9 +73,10 @@
   <p>Foram utilizadas as seguintes tecnologias para a criação do nosso projeto: </p><br>
 
   <div align="center">
-  <img width="50 rem" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"/> Github 
+  <img width="50 rem" src="https://cdn.icon-icons.com/icons2/936/PNG/512/github-logo_icon-icons.com_73546.png"/> Github 
   <img width="50 rem" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg"/> Java
   <img width="50 rem" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"/> MySQL
+  <img width="50 rem" src="https://cdn.icon-icons.com/icons2/2389/PNG/512/azure_devops_logo_icon_145466.png"/> DevOps
   </div>
   
   → [Voltar ao topo](#topo)
