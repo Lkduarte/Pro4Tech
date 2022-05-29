@@ -24,7 +24,9 @@ Para a terceira sprint, nossos objetivos foram divididos da seguinte forma:
   
 * Desenvolvimento das telas de mensagem individual e gerenciamento de usuários e projeto; 
 
-* Integração do banco de dados com as telas de cadastro de usuário, projetos e de login.
+* Construção da documentação da plataforma;
+  
+* Criação do sistema de relatórios.
   
 
 → [Voltar ao topo](#topo)
