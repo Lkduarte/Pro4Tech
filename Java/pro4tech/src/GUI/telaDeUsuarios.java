@@ -45,6 +45,7 @@ public class telaDeUsuarios extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        tabelaUsuarios.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         tabelaUsuarios.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -66,6 +67,9 @@ public class telaDeUsuarios extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tabelaUsuarios);
 
+        botaoVoltar.setBackground(new java.awt.Color(102, 102, 102));
+        botaoVoltar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        botaoVoltar.setForeground(new java.awt.Color(255, 255, 255));
         botaoVoltar.setText("Voltar");
         botaoVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,14 +77,20 @@ public class telaDeUsuarios extends javax.swing.JFrame {
             }
         });
 
+        botaoNovoCliente.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        botaoNovoCliente.setForeground(new java.awt.Color(255, 153, 51));
         botaoNovoCliente.setText("Novo Cliente");
+        botaoNovoCliente.setPreferredSize(new java.awt.Dimension(250, 30));
         botaoNovoCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoNovoClienteActionPerformed(evt);
             }
         });
 
+        botaoNovoFuncionario.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        botaoNovoFuncionario.setForeground(new java.awt.Color(255, 153, 51));
         botaoNovoFuncionario.setText("Novo Funcionário");
+        botaoNovoFuncionario.setPreferredSize(new java.awt.Dimension(250, 30));
         botaoNovoFuncionario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoNovoFuncionarioActionPerformed(evt);
@@ -99,7 +109,7 @@ public class telaDeUsuarios extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(botaoNovoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(botaoNovoFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(botaoNovoFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(87, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -107,8 +117,8 @@ public class telaDeUsuarios extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(47, 47, 47)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(botaoNovoCliente)
-                    .addComponent(botaoNovoFuncionario))
+                    .addComponent(botaoNovoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botaoNovoFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)

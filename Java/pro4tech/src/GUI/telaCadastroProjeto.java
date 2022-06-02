@@ -40,7 +40,7 @@ public class telaCadastroProjeto extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        botaoLimpar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        botaoLimpar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         botaoLimpar.setForeground(new java.awt.Color(255, 153, 51));
         botaoLimpar.setText("Limpar");
         botaoLimpar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -51,7 +51,7 @@ public class telaCadastroProjeto extends javax.swing.JFrame {
         });
 
         botaoCadastrarProjeto.setBackground(new java.awt.Color(255, 153, 51));
-        botaoCadastrarProjeto.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        botaoCadastrarProjeto.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         botaoCadastrarProjeto.setForeground(new java.awt.Color(255, 255, 255));
         botaoCadastrarProjeto.setText("Cadastrar");
         botaoCadastrarProjeto.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -61,8 +61,9 @@ public class telaCadastroProjeto extends javax.swing.JFrame {
             }
         });
 
-        botaoVoltar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        botaoVoltar.setForeground(new java.awt.Color(255, 153, 51));
+        botaoVoltar.setBackground(new java.awt.Color(102, 102, 102));
+        botaoVoltar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        botaoVoltar.setForeground(new java.awt.Color(255, 255, 255));
         botaoVoltar.setText("Voltar");
         botaoVoltar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         botaoVoltar.addActionListener(new java.awt.event.ActionListener() {

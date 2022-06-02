@@ -108,10 +108,10 @@ public class telaCadastroAdministrador extends javax.swing.JFrame {
             }
         });
 
-        botaoLimpar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        botaoLimpar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         botaoLimpar.setForeground(new java.awt.Color(255, 153, 51));
         botaoLimpar.setText("Limpar");
-        botaoLimpar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botaoLimpar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         botaoLimpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoLimparActionPerformed(evt);
@@ -119,10 +119,10 @@ public class telaCadastroAdministrador extends javax.swing.JFrame {
         });
 
         botaoCadastrar.setBackground(new java.awt.Color(255, 153, 51));
-        botaoCadastrar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        botaoCadastrar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         botaoCadastrar.setForeground(new java.awt.Color(255, 255, 255));
         botaoCadastrar.setText("Cadastrar");
-        botaoCadastrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botaoCadastrar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         botaoCadastrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 botaoCadastrarMouseClicked(evt);
@@ -134,10 +134,11 @@ public class telaCadastroAdministrador extends javax.swing.JFrame {
             }
         });
 
-        botaoVoltar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        botaoVoltar.setForeground(new java.awt.Color(255, 153, 51));
+        botaoVoltar.setBackground(new java.awt.Color(102, 102, 102));
+        botaoVoltar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        botaoVoltar.setForeground(new java.awt.Color(255, 255, 255));
         botaoVoltar.setText("Voltar");
-        botaoVoltar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botaoVoltar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         botaoVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoVoltarActionPerformed(evt);

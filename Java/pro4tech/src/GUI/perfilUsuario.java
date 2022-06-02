@@ -62,23 +62,19 @@ public class perfilUsuario extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
 
-        jLabel2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 102, 0));
+        jLabel2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel2.setText("Telefone:");
 
-        jLabel3.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 102, 0));
+        jLabel3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel3.setText("Empresa:");
 
-        jLabel4.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 102, 0));
+        jLabel4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel4.setText("Função:");
 
-        jLabel5.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 102, 0));
+        jLabel5.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel5.setText("E-mail:");
 
-        campoNome.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(102, 102, 102)));
+        campoNome.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(255, 153, 51)));
         campoNome.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         campoNome.setDisabledTextColor(new java.awt.Color(102, 102, 102));
         campoNome.setEnabled(false);
@@ -91,7 +87,7 @@ public class perfilUsuario extends javax.swing.JFrame {
             }
         });
 
-        campoTelefone.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(102, 102, 102)));
+        campoTelefone.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(255, 153, 51)));
         campoTelefone.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         campoTelefone.setDisabledTextColor(new java.awt.Color(102, 102, 102));
         campoTelefone.addActionListener(new java.awt.event.ActionListener() {
@@ -100,7 +96,7 @@ public class perfilUsuario extends javax.swing.JFrame {
             }
         });
 
-        campoEmpresa.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(102, 102, 102)));
+        campoEmpresa.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(255, 153, 51)));
         campoEmpresa.setDisabledTextColor(new java.awt.Color(102, 102, 102));
         campoEmpresa.setEnabled(false);
         campoEmpresa.setSelectedTextColor(new java.awt.Color(102, 102, 102));
@@ -110,13 +106,13 @@ public class perfilUsuario extends javax.swing.JFrame {
             }
         });
 
-        campoFuncao.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(102, 102, 102)));
+        campoFuncao.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(255, 153, 51)));
         campoFuncao.setCaretColor(new java.awt.Color(153, 153, 153));
         campoFuncao.setDisabledTextColor(new java.awt.Color(102, 102, 102));
         campoFuncao.setEnabled(false);
         campoFuncao.setSelectedTextColor(new java.awt.Color(102, 102, 102));
 
-        campoEmail.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(102, 102, 102)));
+        campoEmail.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(255, 153, 51)));
         campoEmail.setDisabledTextColor(new java.awt.Color(102, 102, 102));
         campoEmail.setEnabled(false);
 
@@ -137,11 +133,10 @@ public class perfilUsuario extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 102, 0));
+        jLabel1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel1.setText("Nome completo:");
 
-        botaoConfirma.setBackground(new java.awt.Color(255, 102, 0));
+        botaoConfirma.setBackground(new java.awt.Color(255, 153, 51));
         botaoConfirma.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         botaoConfirma.setForeground(new java.awt.Color(255, 255, 255));
         botaoConfirma.setText("Confirmar");
@@ -159,12 +154,10 @@ public class perfilUsuario extends javax.swing.JFrame {
             }
         });
 
-        botaoAlterarSenha.setBackground(new java.awt.Color(255, 102, 0));
         botaoAlterarSenha.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        botaoAlterarSenha.setForeground(new java.awt.Color(255, 255, 255));
+        botaoAlterarSenha.setForeground(new java.awt.Color(255, 153, 51));
         botaoAlterarSenha.setText("Alterar senha");
-        botaoAlterarSenha.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 102, 0), 1, true));
-        botaoAlterarSenha.setBorderPainted(false);
+        botaoAlterarSenha.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         botaoAlterarSenha.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         botaoAlterarSenha.setFocusPainted(false);
         botaoAlterarSenha.setFocusable(false);
@@ -221,7 +214,7 @@ public class perfilUsuario extends javax.swing.JFrame {
                             .addComponent(jLabel4)
                             .addGap(183, 183, 183)
                             .addComponent(jLabel3))))
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -244,8 +237,8 @@ public class perfilUsuario extends javax.swing.JFrame {
                     .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(campoEmpresa, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                    .addComponent(campoFuncao, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE))
+                    .addComponent(campoEmpresa)
+                    .addComponent(campoFuncao))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -258,8 +251,8 @@ public class perfilUsuario extends javax.swing.JFrame {
                 .addGap(13, 13, 13))
         );
 
-        jLabel6.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 102, 0));
+        jLabel6.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 153, 51));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Perfil");
 
@@ -287,7 +280,7 @@ public class perfilUsuario extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel6)
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14))
         );

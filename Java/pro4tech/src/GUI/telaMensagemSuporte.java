@@ -69,7 +69,7 @@ public class telaMensagemSuporte extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 1, true), "Inserir Mensagem:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 24))); // NOI18N
 
-        botaoLimpar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        botaoLimpar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         botaoLimpar.setForeground(new java.awt.Color(255, 153, 51));
         botaoLimpar.setText("Limpar");
         botaoLimpar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -131,8 +131,9 @@ public class telaMensagemSuporte extends javax.swing.JFrame {
             }
         });
 
-        botaoVoltar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        botaoVoltar.setForeground(new java.awt.Color(255, 153, 51));
+        botaoVoltar.setBackground(new java.awt.Color(102, 102, 102));
+        botaoVoltar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        botaoVoltar.setForeground(new java.awt.Color(255, 255, 255));
         botaoVoltar.setText("Voltar");
         botaoVoltar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         botaoVoltar.addActionListener(new java.awt.event.ActionListener() {
@@ -162,7 +163,7 @@ public class telaMensagemSuporte extends javax.swing.JFrame {
         });
 
         botaoEnviar.setBackground(new java.awt.Color(255, 153, 51));
-        botaoEnviar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        botaoEnviar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         botaoEnviar.setForeground(new java.awt.Color(255, 255, 255));
         botaoEnviar.setText("Enviar");
         botaoEnviar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));

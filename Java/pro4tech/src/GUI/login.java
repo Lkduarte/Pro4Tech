@@ -64,10 +64,9 @@ public class login extends javax.swing.JFrame {
             }
         });
 
-        botaoEntrar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        botaoEntrar.setForeground(new java.awt.Color(255, 153, 51));
+        botaoEntrar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         botaoEntrar.setText("Entrar");
-        botaoEntrar.setBorder(null);
+        botaoEntrar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         botaoEntrar.setBorderPainted(false);
         botaoEntrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         botaoEntrar.setFocusPainted(false);

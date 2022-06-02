@@ -43,7 +43,7 @@ public class menuSuporte extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        botaoPerfil.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        botaoPerfil.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         botaoPerfil.setForeground(new java.awt.Color(255, 153, 51));
         botaoPerfil.setText("Perfil");
         botaoPerfil.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(203, 203, 203), 1, true));
@@ -61,7 +61,7 @@ public class menuSuporte extends javax.swing.JFrame {
             }
         });
 
-        botaoMensagem.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        botaoMensagem.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         botaoMensagem.setForeground(new java.awt.Color(255, 153, 51));
         botaoMensagem.setText("Mensagens ");
         botaoMensagem.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(203, 203, 203), 1, true));
@@ -74,7 +74,7 @@ public class menuSuporte extends javax.swing.JFrame {
             }
         });
 
-        botaoProjeto.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        botaoProjeto.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         botaoProjeto.setForeground(new java.awt.Color(255, 153, 51));
         botaoProjeto.setText("Projetos");
         botaoProjeto.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(203, 203, 203), 1, true));
@@ -87,7 +87,7 @@ public class menuSuporte extends javax.swing.JFrame {
             }
         });
 
-        botaoCadastrarCliente.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        botaoCadastrarCliente.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         botaoCadastrarCliente.setForeground(new java.awt.Color(255, 153, 51));
         botaoCadastrarCliente.setText("Cadastrar Cliente");
         botaoCadastrarCliente.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(203, 203, 203), 1, true));
@@ -107,7 +107,9 @@ public class menuSuporte extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logoEsticada.png"))); // NOI18N
 
+        botaoVoltar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         botaoVoltar.setText("Sair");
+        botaoVoltar.setPreferredSize(new java.awt.Dimension(50, 30));
         botaoVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoVoltarActionPerformed(evt);
@@ -121,26 +123,32 @@ public class menuSuporte extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(120, 120, 120)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(botaoVoltar)
-                        .addGap(153, 153, 153)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(botaoCadastrarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(botaoMensagem, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(botaoPerfil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(botaoProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(129, Short.MAX_VALUE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(120, 120, 120)
+                                .addComponent(jLabel1))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(251, 251, 251)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(botaoCadastrarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(botaoMensagem, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(botaoPerfil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(botaoProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(0, 123, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(botaoVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(56, 56, 56)
+                .addGap(22, 22, 22)
+                .addComponent(botaoVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
                 .addComponent(botaoPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(botaoProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -149,10 +157,6 @@ public class menuSuporte extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(botaoCadastrarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(21, 21, 21))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(botaoVoltar)
-                .addContainerGap())
         );
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
