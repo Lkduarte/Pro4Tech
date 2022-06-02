@@ -1,6 +1,7 @@
 package GUI;
 
 import Principal.*;
+import java.awt.event.KeyEvent;
 import modelo.*;
 
 import javax.swing.JOptionPane;
@@ -53,6 +54,11 @@ public class login extends javax.swing.JFrame {
                 campoLoginActionPerformed(evt);
             }
         });
+        campoLogin.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                campoLoginKeyPressed(evt);
+            }
+        });
 
         campoSenha.setBackground(new java.awt.Color(255, 153, 51));
         campoSenha.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -63,12 +69,17 @@ public class login extends javax.swing.JFrame {
                 campoSenhaActionPerformed(evt);
             }
         });
+        campoSenha.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                campoSenhaKeyPressed(evt);
+            }
+        });
 
         botaoEntrar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         botaoEntrar.setText("Entrar");
         botaoEntrar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         botaoEntrar.setBorderPainted(false);
-        botaoEntrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botaoEntrar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         botaoEntrar.setFocusPainted(false);
         botaoEntrar.setFocusable(false);
         botaoEntrar.setRequestFocusEnabled(false);
@@ -219,6 +230,91 @@ public class login extends javax.swing.JFrame {
     private void campoLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoLoginActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_campoLoginActionPerformed
+
+    private void campoLoginKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_campoLoginKeyPressed
+         if (evt.getKeyCode()==KeyEvent.VK_ENTER){
+            
+            if(campoLogin.getText().isEmpty() || new String(campoSenha.getPassword()).isEmpty()){
+            JOptionPane.showMessageDialog(null, "Usuário ou senha inválidos");
+            return;
+        }
+
+        if(!Principal.daoUsuario.existeUsuario(campoLogin.getText())){
+            JOptionPane.showMessageDialog(null, "Usuário ou senha inválidos");
+            return;
+        }
+
+        Usuario usuario = Principal.daoUsuario.getUsuarioByUserName(campoLogin.getText());
+
+        if(usuario == null){
+            JOptionPane.showMessageDialog(null, "Usuário ou senha inválidos");
+            return;
+        }
+
+        if(!usuario.getSenha().equals(new String(campoSenha.getPassword()))){
+
+            JOptionPane.showMessageDialog(null, "Usuário ou senha inválidos");
+            return;
+        }
+
+        if(usuario.getPerfilUsuario() == FuncaoUsuario.CLIENTE.getId()){
+            new menuCliente().setVisible(true);
+        }
+        if(usuario.getPerfilUsuario() == FuncaoUsuario.SUPORTE.getId()){
+            new menuSuporte().setVisible(true);
+        }
+        if(usuario.getPerfilUsuario() == FuncaoUsuario.ADMINISTRADOR.getId()){
+            new menuAdm().setVisible(true);
+        }
+
+        Principal.usuarioLogado = usuario;
+
+        dispose();
+        }
+    }//GEN-LAST:event_campoLoginKeyPressed
+
+    private void campoSenhaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_campoSenhaKeyPressed
+        // TODO add your handling code here:
+        if (evt.getKeyCode()==KeyEvent.VK_ENTER){
+            
+            if(campoLogin.getText().isEmpty() || new String(campoSenha.getPassword()).isEmpty()){
+            JOptionPane.showMessageDialog(null, "Usuário ou senha inválidos");
+            return;
+        }
+
+        if(!Principal.daoUsuario.existeUsuario(campoLogin.getText())){
+            JOptionPane.showMessageDialog(null, "Usuário ou senha inválidos");
+            return;
+        }
+
+        Usuario usuario = Principal.daoUsuario.getUsuarioByUserName(campoLogin.getText());
+
+        if(usuario == null){
+            JOptionPane.showMessageDialog(null, "Usuário ou senha inválidos");
+            return;
+        }
+
+        if(!usuario.getSenha().equals(new String(campoSenha.getPassword()))){
+
+            JOptionPane.showMessageDialog(null, "Usuário ou senha inválidos");
+            return;
+        }
+
+        if(usuario.getPerfilUsuario() == FuncaoUsuario.CLIENTE.getId()){
+            new menuCliente().setVisible(true);
+        }
+        if(usuario.getPerfilUsuario() == FuncaoUsuario.SUPORTE.getId()){
+            new menuSuporte().setVisible(true);
+        }
+        if(usuario.getPerfilUsuario() == FuncaoUsuario.ADMINISTRADOR.getId()){
+            new menuAdm().setVisible(true);
+        }
+
+        Principal.usuarioLogado = usuario;
+
+        dispose();
+        }
+    }//GEN-LAST:event_campoSenhaKeyPressed
 
     /**
      * @param args the command line arguments

@@ -1,5 +1,6 @@
 package DAO;
 
+import Principal.Principal;
 import modelo.*;
 
 import java.sql.Connection;
@@ -136,4 +137,19 @@ public class UsuarioDAO {
         }
         
     }
+    
+    /*public void excluirUsuario(){
+        String sql = "DELETE FROM usuario WHERE usuarioId = ?;";
+        Usuario usuario;
+        try {
+            
+            try(PreparedStatement stmt = connection.prepareStatement(sql)){
+                stmt.setInt(1, usuario.getUsuarioId());
+                stmt.executeUpdate();
+            }
+        }catch (SQLException erro){
+            throw new RuntimeException(erro);
+        } 
+    }*/
+
 }

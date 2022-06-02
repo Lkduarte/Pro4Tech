@@ -42,6 +42,9 @@ public class telaDeUsuarios extends javax.swing.JFrame {
         botaoVoltar = new javax.swing.JButton();
         botaoNovoCliente = new javax.swing.JButton();
         botaoNovoFuncionario = new javax.swing.JButton();
+        botaoExcluirUsuario = new javax.swing.JButton();
+        botaoEditarUsuario = new javax.swing.JButton();
+        usuarioId = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -97,19 +100,46 @@ public class telaDeUsuarios extends javax.swing.JFrame {
             }
         });
 
+        botaoExcluirUsuario.setText("Excluir Usuário");
+        botaoExcluirUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoExcluirUsuarioActionPerformed(evt);
+            }
+        });
+
+        botaoEditarUsuario.setText("Editar Usuário");
+        botaoEditarUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoEditarUsuarioActionPerformed(evt);
+            }
+        });
+
+        usuarioId.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                usuarioIdActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(76, 76, 76)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(botaoVoltar)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 637, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(botaoNovoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(botaoVoltar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(usuarioId, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 637, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(botaoNovoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(botaoNovoFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(botaoEditarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(botaoNovoFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(botaoExcluirUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(87, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -118,11 +148,15 @@ public class telaDeUsuarios extends javax.swing.JFrame {
                 .addGap(47, 47, 47)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botaoNovoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botaoEditarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botaoExcluirUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(botaoNovoFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(botaoVoltar)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botaoVoltar)
+                    .addComponent(usuarioId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -150,6 +184,46 @@ public class telaDeUsuarios extends javax.swing.JFrame {
         telaCadastroAdministrador funcionario = new telaCadastroAdministrador();
         funcionario.setVisible(true);
     }//GEN-LAST:event_botaoNovoFuncionarioActionPerformed
+
+    private void botaoExcluirUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoExcluirUsuarioActionPerformed
+       
+        /*int index = tabelaUsuarios.getSelectedRow();
+        Usuario usuario;
+        
+        usuario = Principal.daoUsuario.ListarUsuarios().get(index);
+        
+        usuarioId.setText(String.valueOf(usuario.getUsuarioId()));
+        
+        Principal.daoUsuario.excluirUsuario();*/
+     
+
+    }//GEN-LAST:event_botaoExcluirUsuarioActionPerformed
+
+    
+    /*private void excluirUsuario(){
+          int resposta = JOptionPane.showConfirmDialog(this, "Deseja realmente excluir usuário selecionado?", "Confirmação",
+                    JOptionPane.YES_NO_OPTION);
+        if (resposta == JOptionPane.YES_OPTION){
+            
+            Usuario usuario = new Usuario();
+                //selecione um cliente na tabela para poder excluir
+                Principal.daoUsuario.ex(usuario.get(tabelaUsuarios.getSelectedRow()).getUsuarioId());
+                //mensagem de exclusão do cliente selecionado
+                JOptionPane.showMessageDialog(this, "Cliente excluido com sucesso!");
+            }else{
+            JOptionPane.showMessageDialog(this, "Selecione um cliente para exclusão");
+        */
+
+    
+    
+    
+    private void botaoEditarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoEditarUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botaoEditarUsuarioActionPerformed
+
+    private void usuarioIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuarioIdActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_usuarioIdActionPerformed
 
     
      private void carregaUsuarios() {
@@ -211,10 +285,13 @@ public class telaDeUsuarios extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botaoEditarUsuario;
+    private javax.swing.JButton botaoExcluirUsuario;
     private javax.swing.JButton botaoNovoCliente;
     private javax.swing.JButton botaoNovoFuncionario;
     private javax.swing.JButton botaoVoltar;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tabelaUsuarios;
+    private javax.swing.JTextField usuarioId;
     // End of variables declaration//GEN-END:variables
 }
