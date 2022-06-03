@@ -1,5 +1,6 @@
 package DAO;
 
+import Principal.Principal;
 import modelo.*;
 
 import java.sql.Connection;
@@ -18,17 +19,18 @@ public class CadastroDAO {
     }
     
     public void cadastroMensagem(Mensagem mensagem){
-        String sql = "INSERT INTO mensagem(conteudoMsg,assuntoMsg,tipo,dataMsg,horaMsg,codProjeto) VALUES (?,?,?,?,?,?)";
+        String sql = "INSERT INTO mensagem(assuntoMsg,dataMsg,horaMsg,conteudoMsg,tipo,usuarioId,codProjeto) VALUES (?,?,?,?,?,?,?)";
         
         try {
             
-            try (PreparedStatement stmt = connection.prepareStatement(sql)) {
-                stmt.setString(1, mensagem.getConteudoMsg());
-                stmt.setString(2, mensagem.getAssuntoMsg());
-                stmt.setString(3, mensagem.getTipo());
-                stmt.setDate(4, new java.sql.Date(mensagem.getDataMsg().getTime()));
-                stmt.setTimestamp(5, new java.sql.Timestamp(mensagem.getHoraMsg().getTime()));
-                stmt.setInt(6, mensagem.getCodProjeto());
+            try (PreparedStatement stmt = Principal.conexao.prepareStatement(sql)) {
+                stmt.setString(1, mensagem.getAssuntoMsg());
+                stmt.setDate(2, new java.sql.Date(mensagem.getDataMsg().getTime()));
+                stmt.setTimestamp(3, new java.sql.Timestamp(mensagem.getHoraMsg().getTime()));
+                stmt.setString(4, mensagem.getConteudoMsg());
+                stmt.setString(5, mensagem.getTipo());
+                stmt.setInt(6, mensagem.getUsuarioId());
+                stmt.setInt(7, mensagem.getCodProjeto());
                 stmt.executeUpdate();
                 
             }
@@ -58,52 +60,6 @@ public class CadastroDAO {
             throw new RuntimeException(erro);
         }
     }
-    
-//    public void cadastroAdm (Usuario usuario){
-//        String sql = "INSERT INTO usuario(nomeUsuario,empresaUsuario,funcaoUsuario,telefoneUsuario,emailUsuario,perfilUsuario,senhaUsuario,loginUsuario) VALUES (?,?,?,?,?,?,?,?)";
-//        
-//        try {
-//
-//            try (PreparedStatement stmt = connection.prepareStatement(sql)) {
-//                
-//                stmt.setString(1, usuario.getNomeUsuario());
-//                stmt.setString(2, usuario.getEmpresaUsuario());
-//                stmt.setString(3, usuario.getFuncaoUsuario());
-//                stmt.setString(4, usuario.getTelefoneUsuario());
-//                stmt.setString(5, usuario.getEmailUsuario());
-//                stmt.setString(6, usuario.getPerfilUsuario());
-//                stmt.setString(7, usuario.getLoginUsuario());
-//                stmt.setString(8, usuario.getSenha());
-//                stmt.executeUpdate();
-//                
-//            }
-//            
-//        }catch (SQLException erro){
-//            throw new RuntimeException(erro);
-//        }
-//    }
-     
-//    public void cadastroCliente(Usuario usuario){
-//        String sqlUsuario = "INSERT INTO usuario(nomeUsuario,empresaUsuario,funcaoUsuario,telefoneUsuario,emailUsuario,perfilUsuario,senhaUsuario,loginUsuario) VALUES (?,?,?,?,?,?,?,?)";
-//        
-//        try{
-//            
-//            try(PreparedStatement stmt2 = connection.prepareStatement(sqlUsuario)){
-//                stmt2.setString(1, usuario.getNomeUsuario());
-//                stmt2.setString(2, usuario.getEmpresaUsuario());
-//                stmt2.setString(3, usuario.getFuncaoUsuario());
-//                stmt2.setString(4, usuario.getTelefoneUsuario());
-//                stmt2.setString(5, usuario.getEmailUsuario());
-//                stmt2.setString(6, usuario.getPerfilUsuario());
-//                stmt2.setString(7, usuario.getSenha());
-//                stmt2.setString(8, usuario.getLoginUsuario());
-//                stmt2.executeUpdate();
-//            }
-//            
-//        }catch (SQLException erro){
-//            throw new RuntimeException(erro);
-//        }
-//    }
     
     public List<Mensagem> ListarMensagens(Integer id){
        List<Mensagem> mensagens = new ArrayList<>();
@@ -135,6 +91,57 @@ public class CadastroDAO {
        }
        
        return mensagens;
+    }
+    
+    public List<MensagemIndividual> ListarMensagensIndividual(int idEnviou, Integer idRecebeu){
+       List<MensagemIndividual> mensagens = new ArrayList<>();
+       String sqlListarMensagem = "SELECT * FROM mensagemIndividual where quemRecebeu = ? and quemEnviou = ?;";
+        
+       try(PreparedStatement stmt = Principal.conexao.prepareStatement(sqlListarMensagem)){
+           stmt.setInt(1, idRecebeu);
+           stmt.setInt(2, idEnviou);
+           ResultSet rs = stmt.executeQuery();
+
+           while(rs.next()){
+               
+                MensagemIndividual mensagem = new MensagemIndividual(
+                    rs.getInt("codMensagemIndividual"),
+                    rs.getString("assuntoMsgIndividual"),
+                    rs.getDate("dataMsgIndividual"),
+                    rs.getTimestamp("horaMsgIndividual"),
+                    rs.getString("conteudoMsgIndividual"),
+                    rs.getInt("quemEnviou"),
+                    rs.getInt("quemRecebeu")
+                );
+               
+                mensagens.add(mensagem);
+               
+            }
+           
+       }catch (SQLException erro){
+           throw new RuntimeException(erro);
+       }
+       
+       return mensagens;
+    }
+    
+    public void cadastroMensagemIndividual(MensagemIndividual mensagemIndividual){
+        String sql = "INSERT INTO mensagemIndividual(assuntoMsgIndividual,dataMsgIndividual,horaMsgIndividual,conteudoMsgIndividual,quemEnviou,quemRecebeu) VALUES (?,?,?,?,?,?)";
+            
+        try (PreparedStatement stmt = Principal.conexao.prepareStatement(sql)) {
+            stmt.setString(1, mensagemIndividual.getAssuntoMsgIndividual());
+            stmt.setDate(2, new java.sql.Date(mensagemIndividual.getDataMsgIndividual().getTime()));
+            stmt.setTimestamp(3, new java.sql.Timestamp(mensagemIndividual.getHoraMsgIndividual().getTime()));
+            stmt.setString(4, mensagemIndividual.getConteudoMsgIndividual());
+            stmt.setInt(5, mensagemIndividual.getQuemEnvia() );
+            stmt.setInt(6, mensagemIndividual.getQuemRecebe());
+            stmt.executeUpdate();
+                
+            
+        }catch (SQLException erro){
+            throw new RuntimeException(erro);
+        } 
+        
     }
     
 }

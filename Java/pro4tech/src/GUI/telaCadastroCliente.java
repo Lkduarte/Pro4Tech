@@ -44,7 +44,7 @@ public class telaCadastroCliente extends javax.swing.JFrame {
         campoSenha = new javax.swing.JPasswordField();
         jLabel8 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Cadastro");
         setResizable(false);
 
