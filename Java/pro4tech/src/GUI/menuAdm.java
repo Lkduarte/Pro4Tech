@@ -23,6 +23,8 @@ public class menuAdm extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         botaoSair = new javax.swing.JButton();
+        botaoMensagemIndividual = new javax.swing.JButton();
+        botaoRelatório = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menu Administrador");
@@ -122,6 +124,20 @@ public class menuAdm extends javax.swing.JFrame {
             }
         });
 
+        botaoMensagemIndividual.setText("Mensagem Individual");
+        botaoMensagemIndividual.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoMensagemIndividualActionPerformed(evt);
+            }
+        });
+
+        botaoRelatório.setText("Relatório");
+        botaoRelatório.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoRelatórioActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -130,9 +146,21 @@ public class menuAdm extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(126, 126, 126))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(259, 259, 259))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(botaoSair, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(86, 86, 86)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(botaoRelatório)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(botaoMensagemIndividual))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(botaoMensagens, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
@@ -142,21 +170,17 @@ public class menuAdm extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(botaoProjetos, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(74, 74, 74))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(259, 259, 259))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(botaoSair, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(31, 31, 31)
                 .addComponent(jLabel1)
-                .addGap(84, 84, 84)
+                .addGap(35, 35, 35)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botaoMensagemIndividual)
+                    .addComponent(botaoRelatório))
+                .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botaoPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(botaoProjetos, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -237,6 +261,23 @@ public class menuAdm extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_botaoSairActionPerformed
 
+    private void botaoRelatórioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoRelatórioActionPerformed
+        // TODO add your handling code here:
+
+        telaRelatorio tela = new telaRelatorio();
+        tela.setVisible(true);
+        dispose();
+
+    }//GEN-LAST:event_botaoRelatórioActionPerformed
+
+    private void botaoMensagemIndividualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoMensagemIndividualActionPerformed
+
+        telaMensagemIndividual tela = new telaMensagemIndividual();
+        tela.setVisible(true);
+        dispose();
+
+    }//GEN-LAST:event_botaoMensagemIndividualActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -274,9 +315,11 @@ public class menuAdm extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botaoCadastrarProjeto;
+    private javax.swing.JButton botaoMensagemIndividual;
     private javax.swing.JButton botaoMensagens;
     private javax.swing.JButton botaoPerfil;
     private javax.swing.JButton botaoProjetos;
+    private javax.swing.JButton botaoRelatório;
     private javax.swing.JButton botaoSair;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;

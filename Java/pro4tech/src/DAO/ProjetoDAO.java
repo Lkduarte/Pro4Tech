@@ -1,5 +1,6 @@
 package DAO;
 
+import Principal.Principal;
 import modelo.*;
 
 import java.sql.Connection;
@@ -64,5 +65,31 @@ public class ProjetoDAO {
     
     public boolean existeProjeto(String nomeProjeto){
         return ListarProjetos().stream().anyMatch(r -> r.getNomeProjeto().equalsIgnoreCase(nomeProjeto));
+    }
+    
+    public int[] getCountProjeto(int id){
+        
+        int[] listaProjeto = new int[2]; 
+        
+        try {
+            PreparedStatement stmt = Principal.conexao.prepareStatement("select codProjeto, count(codProjeto), count(distinct(usuarioId)) from mensagem where codProjeto = ?;");
+            stmt.setInt(1, id);
+
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()){
+                int usuarioId = rs.getInt("codProjeto");
+                int count = rs.getInt("count(codProjeto)");
+                int count2 = rs.getInt("count(distinct(usuarioId))");
+
+                listaProjeto[0] = count;
+                listaProjeto[1] = count2;
+                
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return listaProjeto;
     }
 }

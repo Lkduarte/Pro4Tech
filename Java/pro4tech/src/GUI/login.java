@@ -189,8 +189,8 @@ public class login extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Usuário ou senha inválidos");
             return;
         }
-
-        if(!Principal.daoUsuario.existeUsuario(campoLogin.getText())){
+        
+        if(!Principal.daoUsuario.existeLoginUsuario(campoLogin.getText())){
             JOptionPane.showMessageDialog(null, "Usuário ou senha inválidos");
             return;
         }
@@ -221,6 +221,7 @@ public class login extends javax.swing.JFrame {
         Principal.usuarioLogado = usuario;
 
         dispose();
+        
     }//GEN-LAST:event_botaoEntrarActionPerformed
 
     private void campoSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoSenhaActionPerformed
@@ -238,8 +239,8 @@ public class login extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Usuário ou senha inválidos");
             return;
         }
-
-        if(!Principal.daoUsuario.existeUsuario(campoLogin.getText())){
+        
+        if(!Principal.daoUsuario.existeLoginUsuario(campoLogin.getText())){
             JOptionPane.showMessageDialog(null, "Usuário ou senha inválidos");
             return;
         }
@@ -274,15 +275,14 @@ public class login extends javax.swing.JFrame {
     }//GEN-LAST:event_campoLoginKeyPressed
 
     private void campoSenhaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_campoSenhaKeyPressed
-        // TODO add your handling code here:
         if (evt.getKeyCode()==KeyEvent.VK_ENTER){
             
             if(campoLogin.getText().isEmpty() || new String(campoSenha.getPassword()).isEmpty()){
             JOptionPane.showMessageDialog(null, "Usuário ou senha inválidos");
             return;
         }
-
-        if(!Principal.daoUsuario.existeUsuario(campoLogin.getText())){
+        
+        if(!Principal.daoUsuario.existeLoginUsuario(campoLogin.getText())){
             JOptionPane.showMessageDialog(null, "Usuário ou senha inválidos");
             return;
         }
@@ -314,6 +314,7 @@ public class login extends javax.swing.JFrame {
 
         dispose();
         }
+                                  
     }//GEN-LAST:event_campoSenhaKeyPressed
 
     /**
