@@ -13,8 +13,8 @@ nomeUsuario varchar (60),
 empresaUsuario varchar (30),
 funcaoUsuario varchar (30),
 telefoneUsuario varchar (20),
-emailUsuario varchar (30),
-perfilUsuario varchar (20),
+emailUsuario varchar (300),
+perfilUsuario int,
 senhaUsuario varchar (30),
 loginUsuario varchar (30),
 codProjeto int,
@@ -28,10 +28,20 @@ horaMsg time,
 conteudoMsg varchar (800),
 tipo varchar(20),
 usuarioId int,
-perfilId int,
 codProjeto int,
 FOREIGN KEY(codProjeto)references projeto(codProjeto),
 FOREIGN KEY(usuarioId)references usuario(usuarioId));
+
+create table mensagemIndividual
+(codMensagemIndividual int primary key AUTO_INCREMENT,
+assuntoMsgIndividual varchar (50),
+dataMsgIndividual date,
+horaMsgIndividual time,
+conteudoMsgIndividual varchar (800),
+quemEnviou int,
+quemRecebeu int,
+FOREIGN KEY(quemEnviou)references usuario(usuarioId),
+FOREIGN KEY(quemRecebeu)references usuario(usuarioId));
 
 insert into projeto(nomeProjeto,empresaProjeto) values
 ("Projeto Teste 1","Empresa 1"),
