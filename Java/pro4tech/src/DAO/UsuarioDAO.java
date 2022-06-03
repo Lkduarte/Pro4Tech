@@ -132,18 +132,50 @@ public class UsuarioDAO {
         
     }
     
-    /*public void excluirUsuario(){
-        String sql = "DELETE FROM usuario WHERE usuarioId = ?;";
-        Usuario usuario;
+    public void excluirUsuario(int id){
+        String sql = "DELETE FROM usuario WHERE usuarioId = ?";
         try {
             
             try(PreparedStatement stmt = connection.prepareStatement(sql)){
-                stmt.setInt(1, usuario.getUsuarioId());
+                stmt.setInt(1, id);
                 stmt.executeUpdate();
             }
         }catch (SQLException erro){
             throw new RuntimeException(erro);
         } 
+    }
+
+   /* public List<Usuario> ListarUsuariosExcluir(int id){
+       List<Usuario> usuarios = new ArrayList<>();
+       String sqlSelecionarUsuario = "SELECT * FROM usuario;"; 
+       
+       try(PreparedStatement stmt = connection.prepareStatement(sqlSelecionarUsuario)){
+           
+           ResultSet rs = stmt.executeQuery();
+           
+           while(rs.next()){
+               
+                Usuario usuario = new Usuario(
+                    rs.getInt(1),
+                    rs.getString(2),
+                    rs.getString(3),
+                    rs.getString(4),
+                    rs.getString(5),
+                    rs.getString(6),
+                    rs.getInt(7),
+                    rs.getString(8),
+                    rs.getString(9),
+                    rs.getInt(10)
+                );
+               
+               usuarios.add(usuario);
+               
+            }
+       }catch (SQLException erro){
+           JOptionPane.showMessageDialog(null, erro);
+       }
+       
+       return usuarios;
     }*/
     
     public HashMap<Usuario,Integer> getCountUsuario(int id){
@@ -211,5 +243,5 @@ public class UsuarioDAO {
         }
         return null;
     }
-
+    
 }

@@ -68,6 +68,11 @@ public class telaDeUsuarios extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        tabelaUsuarios.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tabelaUsuariosMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(tabelaUsuarios);
 
         botaoVoltar.setBackground(new java.awt.Color(102, 102, 102));
@@ -184,37 +189,34 @@ public class telaDeUsuarios extends javax.swing.JFrame {
         telaCadastroAdministrador funcionario = new telaCadastroAdministrador();
         funcionario.setVisible(true);
     }//GEN-LAST:event_botaoNovoFuncionarioActionPerformed
-
+    
     private void botaoExcluirUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoExcluirUsuarioActionPerformed
        
-        /*int index = tabelaUsuarios.getSelectedRow();
+        int index = tabelaUsuarios.getSelectedRow();
+        System.out.println(index);
         Usuario usuario;
-        
-        usuario = Principal.daoUsuario.ListarUsuarios().get(index);
-        
-        usuarioId.setText(String.valueOf(usuario.getUsuarioId()));
-        
-        Principal.daoUsuario.excluirUsuario();*/
-     
+
+        int resposta = JOptionPane.showConfirmDialog(this, "Deseja realmente excluir usuário selecionado?", "Confirmação",
+                JOptionPane.YES_NO_OPTION);
+        if (resposta == JOptionPane.YES_OPTION) {
+
+            try {
+                usuario = Principal.daoUsuario.ListarUsuarios().get(index);
+                System.out.println(index);
+            } catch (Exception erro) {
+                throw new RuntimeException(erro);
+            }
+
+            usuarioId.setText(String.valueOf(usuario.getUsuarioId()));
+            Principal.daoUsuario.excluirUsuario(usuario.getUsuarioId());
+            System.out.println(usuario.getUsuarioId());
+
+            JOptionPane.showMessageDialog(this, "Cliente excluido com sucesso!");
+        } 
+            carregaUsuarios();
 
     }//GEN-LAST:event_botaoExcluirUsuarioActionPerformed
 
-    
-    /*private void excluirUsuario(){
-          int resposta = JOptionPane.showConfirmDialog(this, "Deseja realmente excluir usuário selecionado?", "Confirmação",
-                    JOptionPane.YES_NO_OPTION);
-        if (resposta == JOptionPane.YES_OPTION){
-            
-            Usuario usuario = new Usuario();
-                //selecione um cliente na tabela para poder excluir
-                Principal.daoUsuario.ex(usuario.get(tabelaUsuarios.getSelectedRow()).getUsuarioId());
-                //mensagem de exclusão do cliente selecionado
-                JOptionPane.showMessageDialog(this, "Cliente excluido com sucesso!");
-            }else{
-            JOptionPane.showMessageDialog(this, "Selecione um cliente para exclusão");
-        */
-
-    
     
     
     private void botaoEditarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoEditarUsuarioActionPerformed
@@ -225,6 +227,25 @@ public class telaDeUsuarios extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_usuarioIdActionPerformed
 
+    private void tabelaUsuariosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelaUsuariosMouseClicked
+        // TODO add your handling code here:
+        selecionaUsuario();
+    }//GEN-LAST:event_tabelaUsuariosMouseClicked
+
+    
+    private void selecionaUsuario(){
+        
+        int index = tabelaUsuarios.getSelectedRow();
+        Usuario usuario;
+
+            try {
+                usuario = Principal.daoUsuario.ListarUsuarios().get(index);
+            } catch (Exception erro) {
+                throw new RuntimeException(erro);
+            }
+
+            usuarioId.setText(String.valueOf(usuario.getUsuarioId()));
+    }
     
      private void carregaUsuarios() {
         String sql = "SELECT nomeUsuario, funcaoUsuario, empresaUsuario FROM usuario ORDER BY nomeUsuario ASC;";
