@@ -49,3 +49,6 @@ insert into projeto(nomeProjeto,empresaProjeto) values
 ("Projeto Teste 3","Empresa 3"),
 ("Projeto Teste 4","Empresa 4");
 
+insert into usuario values 
+(1,"Icaro Dell Osso Vaz de Carvalho","FATEC","Scrum Master","(12)981826657","icaro.dellosso@hotmail.com",2,"123","icaro",1);
+
