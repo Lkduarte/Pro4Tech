@@ -18,7 +18,6 @@ public class menuAdm extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         botaoPerfil = new javax.swing.JButton();
         botaoProjetos = new javax.swing.JButton();
-        botaoCadastrarProjeto = new javax.swing.JButton();
         botaoMensagens = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -69,26 +68,9 @@ public class menuAdm extends javax.swing.JFrame {
             }
         });
 
-        botaoCadastrarProjeto.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        botaoCadastrarProjeto.setForeground(new java.awt.Color(255, 153, 51));
-        botaoCadastrarProjeto.setText("Cadastrar Projeto");
-        botaoCadastrarProjeto.setActionCommand("Cadastro de Projeto");
-        botaoCadastrarProjeto.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(203, 203, 203), 1, true));
-        botaoCadastrarProjeto.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        botaoCadastrarProjeto.setFocusPainted(false);
-        botaoCadastrarProjeto.setFocusable(false);
-        botaoCadastrarProjeto.setRequestFocusEnabled(false);
-        botaoCadastrarProjeto.setRolloverEnabled(false);
-        botaoCadastrarProjeto.setVerifyInputWhenFocusTarget(false);
-        botaoCadastrarProjeto.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botaoCadastrarProjetoActionPerformed(evt);
-            }
-        });
-
         botaoMensagens.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         botaoMensagens.setForeground(new java.awt.Color(255, 153, 51));
-        botaoMensagens.setText("Mensagens");
+        botaoMensagens.setText("Mensagens dos Projetos");
         botaoMensagens.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(203, 203, 203), 1, true));
         botaoMensagens.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         botaoMensagens.setFocusPainted(false);
@@ -105,7 +87,7 @@ public class menuAdm extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 153, 51));
-        jButton1.setText("Cadastro");
+        jButton1.setText("Usuários");
         jButton1.setPreferredSize(new java.awt.Dimension(280, 50));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -146,15 +128,11 @@ public class menuAdm extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(126, 126, 126))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(259, 259, 259))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(botaoSair, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(86, 86, 86)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -163,11 +141,11 @@ public class menuAdm extends javax.swing.JFrame {
                         .addComponent(botaoMensagemIndividual))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(botaoMensagens, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
-                        .addComponent(botaoCadastrarProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(botaoPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
                         .addComponent(botaoProjetos, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(74, 74, 74))
         );
@@ -187,10 +165,8 @@ public class menuAdm extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botaoMensagens, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botaoCadastrarProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 97, Short.MAX_VALUE)
                 .addComponent(botaoSair, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -231,14 +207,6 @@ public class menuAdm extends javax.swing.JFrame {
         dispose();
         
     }//GEN-LAST:event_botaoProjetosActionPerformed
-
-    private void botaoCadastrarProjetoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCadastrarProjetoActionPerformed
-        
-        telaCadastroProjeto cadastro = new telaCadastroProjeto();
-        cadastro.setVisible(true);
-        dispose();
-        
-    }//GEN-LAST:event_botaoCadastrarProjetoActionPerformed
 
     private void botaoMensagensActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoMensagensActionPerformed
        
@@ -314,7 +282,6 @@ public class menuAdm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton botaoCadastrarProjeto;
     private javax.swing.JButton botaoMensagemIndividual;
     private javax.swing.JButton botaoMensagens;
     private javax.swing.JButton botaoPerfil;
