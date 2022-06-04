@@ -132,6 +132,7 @@ public class UsuarioDAO {
         
     }
     
+    /*
     public void excluirUsuario(int id){
         String sql = "DELETE FROM usuario WHERE usuarioId = ?";
         try {
@@ -144,6 +145,7 @@ public class UsuarioDAO {
             throw new RuntimeException(erro);
         } 
     }
+    */
 
    /* public List<Usuario> ListarUsuariosExcluir(int id){
        List<Usuario> usuarios = new ArrayList<>();

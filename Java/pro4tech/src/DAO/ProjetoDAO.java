@@ -36,6 +36,23 @@ public class ProjetoDAO {
             throw new RuntimeException(erro);
         }
     }
+    
+    public void editar(Projeto projeto){
+        String sql = "UPDATE projeto SET nomeProjeto=?, empresaProjeto=? WHERE codProjeto=?;";
+        
+        try {
+            
+            try (PreparedStatement stmt = connection.prepareStatement(sql)) {
+                stmt.setString(1, projeto.getNomeProjeto());
+                stmt.setString(2, projeto.getEmpresaProjeto());
+                stmt.setInt(3, projeto.getCodProjeto());
+                stmt.executeUpdate();
+                
+            }
+        }catch (SQLException erro){
+            throw new RuntimeException(erro);
+        } 
+    }
    
     public List<Projeto> ListarProjetos(){
         List<Projeto> projetos = new ArrayList<>();

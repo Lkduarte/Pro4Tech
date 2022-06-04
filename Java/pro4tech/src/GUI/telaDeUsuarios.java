@@ -208,7 +208,7 @@ public class telaDeUsuarios extends javax.swing.JFrame {
             }
 
             usuarioId.setText(String.valueOf(usuario.getUsuarioId()));
-            Principal.daoUsuario.excluirUsuario(usuario.getUsuarioId());
+            //Principal.daoUsuario.excluirUsuario(usuario.getUsuarioId());
             System.out.println(usuario.getUsuarioId());
 
             JOptionPane.showMessageDialog(this, "Cliente excluido com sucesso!");
