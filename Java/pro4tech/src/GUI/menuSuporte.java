@@ -89,7 +89,9 @@ public class menuSuporte extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logoEsticada.png"))); // NOI18N
 
+        botaoVoltar.setBackground(new java.awt.Color(102, 102, 102));
         botaoVoltar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        botaoVoltar.setForeground(new java.awt.Color(255, 255, 255));
         botaoVoltar.setText("Sair");
         botaoVoltar.setPreferredSize(new java.awt.Dimension(50, 30));
         botaoVoltar.addActionListener(new java.awt.event.ActionListener() {

@@ -56,7 +56,9 @@ public class menuCliente extends javax.swing.JFrame {
             }
         });
 
+        botaoSair.setBackground(new java.awt.Color(102, 102, 102));
         botaoSair.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        botaoSair.setForeground(new java.awt.Color(255, 255, 255));
         botaoSair.setText("Sair");
         botaoSair.setPreferredSize(new java.awt.Dimension(50, 30));
         botaoSair.addActionListener(new java.awt.event.ActionListener() {

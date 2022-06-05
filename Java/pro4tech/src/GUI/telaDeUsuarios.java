@@ -48,7 +48,7 @@ public class telaDeUsuarios extends javax.swing.JFrame {
         campoSenha.setVisible(false);
         caixaPerfil.setVisible(false);
 
-        labelSelecione.setVisible(true);
+        //labelSelecione.setVisible(true);
     }
 
     /**
@@ -86,7 +86,6 @@ public class telaDeUsuarios extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         botaoEditarUsuario = new javax.swing.JButton();
         botaoExcluirUsuario = new javax.swing.JButton();
-        labelSelecione = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -137,7 +136,7 @@ public class telaDeUsuarios extends javax.swing.JFrame {
                 botaoVoltarActionPerformed(evt);
             }
         });
-        getContentPane().add(botaoVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 410, -1, -1));
+        getContentPane().add(botaoVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 410, 100, -1));
 
         usuarioId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -258,11 +257,6 @@ public class telaDeUsuarios extends javax.swing.JFrame {
             }
         });
 
-        labelSelecione.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        labelSelecione.setForeground(new java.awt.Color(255, 153, 51));
-        labelSelecione.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelSelecione.setText("Selecione um usuário");
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -299,13 +293,10 @@ public class telaDeUsuarios extends javax.swing.JFrame {
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                             .addComponent(campoFuncao)
                                             .addComponent(campoTelefone, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)))))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(campoSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(caixaPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(labelSelecione, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap())
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(campoSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(caixaPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(25, 25, 25))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 794, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())
@@ -359,8 +350,7 @@ public class telaDeUsuarios extends javax.swing.JFrame {
                         .addGap(32, 32, 32))
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(caixaPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(labelPerfil)
-                        .addComponent(labelSelecione, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(labelPerfil)))
                 .addGap(80, 80, 80)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botaoEditarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -521,7 +511,7 @@ public class telaDeUsuarios extends javax.swing.JFrame {
         campoSenha.setVisible(true);
         caixaPerfil.setVisible(true);
 
-        labelSelecione.setVisible(false);
+        //labelSelecione.setVisible(false);
 
         campoNome.setText(usuario.getNomeUsuario());
         campoEmail.setText(usuario.getEmailUsuario());
@@ -615,7 +605,6 @@ public class telaDeUsuarios extends javax.swing.JFrame {
     private javax.swing.JLabel labelLogin;
     private javax.swing.JLabel labelNome;
     private javax.swing.JLabel labelPerfil;
-    private javax.swing.JLabel labelSelecione;
     private javax.swing.JLabel labelSenha;
     private javax.swing.JLabel labelTelefone;
     private javax.swing.JTable tabelaUsuarios;
