@@ -63,11 +63,7 @@ public class telaDeUsuarios extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tabelaUsuarios = new javax.swing.JTable();
         botaoVoltar = new javax.swing.JButton();
-        botaoExcluirUsuario = new javax.swing.JButton();
-        botaoEditarUsuario = new javax.swing.JButton();
         usuarioId = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
-        labelSelecione = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         botaoNovoFuncionario = new javax.swing.JButton();
         botaoNovoCliente = new javax.swing.JButton();
@@ -87,6 +83,10 @@ public class telaDeUsuarios extends javax.swing.JFrame {
         campoEmpresa = new javax.swing.JTextField();
         campoEmail = new javax.swing.JTextField();
         campoNome = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        botaoEditarUsuario = new javax.swing.JButton();
+        botaoExcluirUsuario = new javax.swing.JButton();
+        labelSelecione = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -131,6 +131,7 @@ public class telaDeUsuarios extends javax.swing.JFrame {
         botaoVoltar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         botaoVoltar.setForeground(new java.awt.Color(255, 255, 255));
         botaoVoltar.setText("Voltar");
+        botaoVoltar.setPreferredSize(new java.awt.Dimension(72, 30));
         botaoVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoVoltarActionPerformed(evt);
@@ -138,45 +139,12 @@ public class telaDeUsuarios extends javax.swing.JFrame {
         });
         getContentPane().add(botaoVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 410, -1, -1));
 
-        botaoExcluirUsuario.setBackground(new java.awt.Color(255, 153, 51));
-        botaoExcluirUsuario.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        botaoExcluirUsuario.setForeground(new java.awt.Color(255, 255, 255));
-        botaoExcluirUsuario.setText("Excluir Usuário");
-        botaoExcluirUsuario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botaoExcluirUsuarioActionPerformed(evt);
-            }
-        });
-        getContentPane().add(botaoExcluirUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 370, 160, 30));
-
-        botaoEditarUsuario.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        botaoEditarUsuario.setForeground(new java.awt.Color(255, 153, 51));
-        botaoEditarUsuario.setText("Salvar Alterações");
-        botaoEditarUsuario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botaoEditarUsuarioActionPerformed(evt);
-            }
-        });
-        getContentPane().add(botaoEditarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 370, 160, 30));
-
         usuarioId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 usuarioIdActionPerformed(evt);
             }
         });
         getContentPane().add(usuarioId, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, 37, -1));
-
-        jLabel9.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 153, 51));
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setText("Usuários");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 794, -1));
-
-        labelSelecione.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        labelSelecione.setForeground(new java.awt.Color(255, 153, 51));
-        labelSelecione.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelSelecione.setText("Selecione um usuário");
-        getContentPane().add(labelSelecione, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 210, 410, 30));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(812, 463));
@@ -264,6 +232,37 @@ public class telaDeUsuarios extends javax.swing.JFrame {
             }
         });
 
+        jLabel9.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 153, 51));
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setText("Usuários");
+
+        botaoEditarUsuario.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        botaoEditarUsuario.setForeground(new java.awt.Color(255, 153, 51));
+        botaoEditarUsuario.setText("Salvar Alterações");
+        botaoEditarUsuario.setPreferredSize(new java.awt.Dimension(72, 30));
+        botaoEditarUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoEditarUsuarioActionPerformed(evt);
+            }
+        });
+
+        botaoExcluirUsuario.setBackground(new java.awt.Color(255, 153, 51));
+        botaoExcluirUsuario.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        botaoExcluirUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        botaoExcluirUsuario.setText("Excluir Usuário");
+        botaoExcluirUsuario.setPreferredSize(new java.awt.Dimension(72, 30));
+        botaoExcluirUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoExcluirUsuarioActionPerformed(evt);
+            }
+        });
+
+        labelSelecione.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        labelSelecione.setForeground(new java.awt.Color(255, 153, 51));
+        labelSelecione.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelSelecione.setText("Selecione um usuário");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -275,35 +274,51 @@ public class telaDeUsuarios extends javax.swing.JFrame {
                 .addComponent(botaoNovoFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(406, Short.MAX_VALUE)
+                .addContainerGap(10, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelLogin)
-                    .addComponent(labelTelefone)
-                    .addComponent(labelFuncao)
-                    .addComponent(labelEmpresa)
-                    .addComponent(labelEmail)
-                    .addComponent(labelNome)
-                    .addComponent(labelSenha)
-                    .addComponent(labelPerfil))
-                .addGap(25, 25, 25)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(campoEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(campoEmail, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
-                        .addComponent(campoNome)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(campoLogin, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(campoFuncao)
-                                .addComponent(campoTelefone, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE))))
-                    .addComponent(campoSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(caixaPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(19, 19, 19))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelLogin)
+                            .addComponent(labelTelefone)
+                            .addComponent(labelFuncao)
+                            .addComponent(labelEmpresa)
+                            .addComponent(labelEmail)
+                            .addComponent(labelNome)
+                            .addComponent(labelSenha)
+                            .addComponent(labelPerfil))
+                        .addGap(25, 25, 25)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(botaoExcluirUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(campoEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(campoEmail, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+                                    .addComponent(campoNome)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(campoLogin, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addComponent(campoFuncao)
+                                            .addComponent(campoTelefone, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)))))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(campoSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(caixaPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(labelSelecione, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 794, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(botaoEditarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(225, 225, 225))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(50, 50, 50)
+                .addGap(10, 10, 10)
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botaoNovoFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(botaoNovoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -344,8 +359,13 @@ public class telaDeUsuarios extends javax.swing.JFrame {
                         .addGap(32, 32, 32))
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(caixaPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(labelPerfil)))
-                .addGap(147, 147, 147))
+                        .addComponent(labelPerfil)
+                        .addComponent(labelSelecione, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(80, 80, 80)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botaoEditarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botaoExcluirUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34))
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, -1));
@@ -460,7 +480,7 @@ public class telaDeUsuarios extends javax.swing.JFrame {
             campoSenha.setVisible(false);
             caixaPerfil.setVisible(false);
 
-            labelSelecione.setVisible(true);
+            //labelSelecione.setVisible(true);
         }
     }//GEN-LAST:event_botaoExcluirUsuarioActionPerformed
 

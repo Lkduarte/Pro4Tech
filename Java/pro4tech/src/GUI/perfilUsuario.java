@@ -121,7 +121,7 @@ public class perfilUsuario extends javax.swing.JFrame {
         botaoVoltar.setText("Voltar");
         botaoVoltar.setAlignmentX(0.5F);
         botaoVoltar.setAutoscrolls(true);
-        botaoVoltar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 102, 102), 1, true));
+        botaoVoltar.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         botaoVoltar.setBorderPainted(false);
         botaoVoltar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         botaoVoltar.setFocusPainted(false);
@@ -140,7 +140,7 @@ public class perfilUsuario extends javax.swing.JFrame {
         botaoConfirma.setForeground(new java.awt.Color(255, 255, 255));
         botaoConfirma.setText("Confirmar");
         botaoConfirma.setAlignmentX(0.5F);
-        botaoConfirma.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 102, 0), 0, true));
+        botaoConfirma.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         botaoConfirma.setBorderPainted(false);
         botaoConfirma.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         botaoConfirma.setFocusCycleRoot(true);
