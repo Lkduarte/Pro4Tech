@@ -49,7 +49,6 @@ public class perfilUsuario extends javax.swing.JFrame {
         botaoVoltar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         botaoConfirma = new javax.swing.JButton();
-        botaoAlterarSenha = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -154,19 +153,6 @@ public class perfilUsuario extends javax.swing.JFrame {
             }
         });
 
-        botaoAlterarSenha.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        botaoAlterarSenha.setForeground(new java.awt.Color(255, 153, 51));
-        botaoAlterarSenha.setText("Alterar senha");
-        botaoAlterarSenha.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        botaoAlterarSenha.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        botaoAlterarSenha.setFocusPainted(false);
-        botaoAlterarSenha.setFocusable(false);
-        botaoAlterarSenha.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botaoAlterarSenhaActionPerformed(evt);
-            }
-        });
-
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/edit.png"))); // NOI18N
         jButton3.setAlignmentX(0.5F);
         jButton3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -189,9 +175,7 @@ public class perfilUsuario extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(botaoVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(252, 252, 252)
-                        .addComponent(botaoAlterarSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(406, 406, 406)
                         .addComponent(botaoConfirma, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(campoEmail, javax.swing.GroupLayout.Alignment.LEADING)
@@ -246,8 +230,7 @@ public class perfilUsuario extends javax.swing.JFrame {
                 .addGap(33, 33, 33)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botaoVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botaoConfirma, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botaoAlterarSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(botaoConfirma, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(13, 13, 13))
         );
 
@@ -358,12 +341,6 @@ public class perfilUsuario extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void botaoAlterarSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoAlterarSenhaActionPerformed
-        
-        new alterarSenha().setVisible(true);
-        
-    }//GEN-LAST:event_botaoAlterarSenhaActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -400,7 +377,6 @@ public class perfilUsuario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton botaoAlterarSenha;
     private javax.swing.JButton botaoConfirma;
     private javax.swing.JButton botaoVoltar;
     private javax.swing.JTextField campoEmail;

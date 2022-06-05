@@ -139,6 +139,12 @@ public class telaProjetos extends javax.swing.JFrame {
 
         jLabel3.setText("Nome da Empresa");
 
+        campoProjeto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoProjetoActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -191,8 +197,7 @@ public class telaProjetos extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
                                 .addComponent(campoProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -269,6 +274,7 @@ public class telaProjetos extends javax.swing.JFrame {
         
         telaCadastroProjeto cadastro = new telaCadastroProjeto();
         cadastro.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btnNovoProjActionPerformed
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
@@ -305,6 +311,10 @@ public class telaProjetos extends javax.swing.JFrame {
         campoEmpresa.setText(projeto.getEmpresaProjeto());
         codProjeto.setText(String.valueOf(projeto.getCodProjeto()));
     }//GEN-LAST:event_tabelaProjetoMouseClicked
+
+    private void campoProjetoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoProjetoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoProjetoActionPerformed
 
     /**
      * @param args the command line arguments

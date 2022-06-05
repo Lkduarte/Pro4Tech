@@ -185,8 +185,8 @@ public class telaCadastroProjeto extends javax.swing.JFrame {
 
     private void botaoVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoVoltarActionPerformed
         
-        menuAdm adm = new menuAdm();
-        adm.setVisible(true);
+        telaProjetos tela = new telaProjetos();
+        tela.setVisible(true);
         dispose();
         
     }//GEN-LAST:event_botaoVoltarActionPerformed

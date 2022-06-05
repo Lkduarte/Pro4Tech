@@ -373,9 +373,13 @@ public class telaMensagemIndividual extends javax.swing.JFrame {
 
     private void botaoVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoVoltarActionPerformed
 
-        if( Principal.usuarioLogado.getPerfilUsuario() == FuncaoUsuario.CLIENTE.getId()){
+        if(Principal.usuarioLogado.getPerfilUsuario() == FuncaoUsuario.CLIENTE.getId()){
             new menuCliente().setVisible(true);
-        }else{
+        }
+        if(Principal.usuarioLogado.getPerfilUsuario() == FuncaoUsuario.SUPORTE.getId()){
+            new menuSuporte().setVisible(true);
+        }
+        if(Principal.usuarioLogado.getPerfilUsuario() == FuncaoUsuario.ADMINISTRADOR.getId()){
             new menuAdm().setVisible(true);
         }
         

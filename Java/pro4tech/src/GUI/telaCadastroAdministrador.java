@@ -353,7 +353,8 @@ public class telaCadastroAdministrador extends javax.swing.JFrame {
     }//GEN-LAST:event_botaoCadastrarActionPerformed
 
     private void botaoVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoVoltarActionPerformed
-
+        telaDeUsuarios tela = new telaDeUsuarios();
+        tela.setVisible(true);
         dispose();
         
     }//GEN-LAST:event_botaoVoltarActionPerformed

@@ -30,36 +30,18 @@ public class menuSuporte extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        botaoPerfil = new javax.swing.JButton();
         botaoMensagem = new javax.swing.JButton();
         botaoProjeto = new javax.swing.JButton();
         botaoCadastrarCliente = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         botaoVoltar = new javax.swing.JButton();
+        botaoMensagemIndividual = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menu Suporte");
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-
-        botaoPerfil.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        botaoPerfil.setForeground(new java.awt.Color(255, 153, 51));
-        botaoPerfil.setText("Perfil");
-        botaoPerfil.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(203, 203, 203), 1, true));
-        botaoPerfil.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        botaoPerfil.setFocusPainted(false);
-        botaoPerfil.setFocusable(false);
-        botaoPerfil.addComponentListener(new java.awt.event.ComponentAdapter() {
-            public void componentResized(java.awt.event.ComponentEvent evt) {
-                botaoPerfilComponentResized(evt);
-            }
-        });
-        botaoPerfil.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botaoPerfilActionPerformed(evt);
-            }
-        });
 
         botaoMensagem.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         botaoMensagem.setForeground(new java.awt.Color(255, 153, 51));
@@ -116,6 +98,13 @@ public class menuSuporte extends javax.swing.JFrame {
             }
         });
 
+        botaoMensagemIndividual.setText("Mensagem Individual");
+        botaoMensagemIndividual.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoMensagemIndividualActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -132,10 +121,11 @@ public class menuSuporte extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(botaoCadastrarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(botaoMensagem, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(botaoPerfil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(botaoProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addGap(0, 123, Short.MAX_VALUE))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(botaoProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(61, 61, 61)
+                                        .addComponent(botaoMensagemIndividual)))))
+                        .addGap(0, 58, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(botaoVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -148,8 +138,8 @@ public class menuSuporte extends javax.swing.JFrame {
                 .addComponent(botaoVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
-                .addComponent(botaoPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                .addComponent(botaoMensagemIndividual)
                 .addGap(18, 18, 18)
                 .addComponent(botaoProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -164,12 +154,6 @@ public class menuSuporte extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void botaoPerfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoPerfilActionPerformed
-//        telaDadosUsuarios usuarios = new telaDadosUsuarios();
-//        usuarios.setVisible(true);
-//        dispose();
-    }//GEN-LAST:event_botaoPerfilActionPerformed
 
     private void botaoMensagemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoMensagemActionPerformed
   
@@ -186,10 +170,6 @@ public class menuSuporte extends javax.swing.JFrame {
         dispose();
 
     }//GEN-LAST:event_botaoProjetoActionPerformed
-
-    private void botaoPerfilComponentResized(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_botaoPerfilComponentResized
-        // TODO add your handling code here:
-    }//GEN-LAST:event_botaoPerfilComponentResized
 
     private void botaoCadastrarClienteComponentResized(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_botaoCadastrarClienteComponentResized
         // TODO add your handling code here:
@@ -208,6 +188,13 @@ public class menuSuporte extends javax.swing.JFrame {
         sair.setVisible(true);
         dispose();
     }//GEN-LAST:event_botaoVoltarActionPerformed
+
+    private void botaoMensagemIndividualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoMensagemIndividualActionPerformed
+
+        telaMensagemIndividual tela = new telaMensagemIndividual();
+        tela.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_botaoMensagemIndividualActionPerformed
     
     /**
      * @param args the command line arguments
@@ -248,7 +235,7 @@ public class menuSuporte extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botaoCadastrarCliente;
     private javax.swing.JButton botaoMensagem;
-    private javax.swing.JButton botaoPerfil;
+    private javax.swing.JButton botaoMensagemIndividual;
     private javax.swing.JButton botaoProjeto;
     private javax.swing.JButton botaoVoltar;
     private javax.swing.JLabel jLabel1;

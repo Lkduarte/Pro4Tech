@@ -1,9 +1,11 @@
 package GUI;
 
+import DAO.UsuarioDAO;
 import modelo.*;
 import Principal.*;
 
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 import javax.swing.text.MaskFormatter;
 
@@ -317,6 +319,12 @@ public class telaCadastroCliente extends javax.swing.JFrame {
 
     private void botaoVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoVoltarActionPerformed
 
+        if(Principal.usuarioLogado.getPerfilUsuario() == FuncaoUsuario.SUPORTE.getId()){
+            new menuSuporte().setVisible(true);
+        }
+        if(Principal.usuarioLogado.getPerfilUsuario() == FuncaoUsuario.ADMINISTRADOR.getId()){
+            new telaDeUsuarios().setVisible(true);
+        }
         dispose();
         
     }//GEN-LAST:event_botaoVoltarActionPerformed

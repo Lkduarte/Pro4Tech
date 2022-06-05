@@ -246,4 +246,43 @@ public class UsuarioDAO {
         return null;
     }
     
+    public void excluirUsuario(Usuario usuario) {
+        String sqlDeletar = "delete from usuario WHERE usuarioId =? and nomeUsuario = ?";
+
+        try {
+            PreparedStatement stmt = Principal.conexao.prepareStatement(sqlDeletar);
+            stmt.setInt(1, usuario.getUsuarioId()); 
+            stmt.setString(2, usuario.getNomeUsuario());
+            stmt.executeUpdate();
+            
+            JOptionPane.showMessageDialog(null, "Deletado com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+        } catch (SQLException ErroSql) {
+            JOptionPane.showMessageDialog(null, "Erro ao remover: "+ErroSql, "Erro", JOptionPane.INFORMATION_MESSAGE);
+        }        
+    }
+    
+    public void editarUsuario(Usuario usuario) {
+
+        String sql = "update usuario set nomeUsuario=?, empresaUsuario=?, funcaoUsuario=?, telefoneUsuario=?, emailUsuario=?, loginUsuario=?, senhaUsuario=?, perfilUsuario=? WHERE usuarioId=?;";
+
+        try {
+
+            PreparedStatement stmt = Principal.conexao.prepareStatement(sql);
+            stmt.setString(1, usuario.getNomeUsuario());
+            stmt.setString(2, usuario.getEmpresaUsuario());
+            stmt.setString(3, usuario.getFuncaoUsuario());
+            stmt.setString(4, usuario.getTelefoneUsuario());
+            stmt.setString(5, usuario.getEmailUsuario());
+            stmt.setString(6, usuario.getLoginUsuario());
+            stmt.setString(7, usuario.getSenha());
+            stmt.setInt(8, usuario.getPerfilUsuario());
+            stmt.setInt(9, usuario.getUsuarioId());
+            stmt.executeUpdate();
+
+        } catch (SQLException erro) {
+            throw new RuntimeException(erro);
+        }
+
+    }
+    
 }
