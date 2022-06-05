@@ -93,7 +93,7 @@ public class telaDeUsuarios extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        tabelaUsuarios.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        tabelaUsuarios.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         tabelaUsuarios.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
