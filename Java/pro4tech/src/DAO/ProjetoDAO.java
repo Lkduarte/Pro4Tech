@@ -53,6 +53,20 @@ public class ProjetoDAO {
             throw new RuntimeException(erro);
         } 
     }
+    
+    public void excluirProjeto(Projeto projeto) {
+        String sqlDeletar = "delete from projeto WHERE codProjeto =?";
+
+        try {
+            PreparedStatement stmt = Principal.conexao.prepareStatement(sqlDeletar);
+            stmt.setInt(1, projeto.getCodProjeto());
+            stmt.executeUpdate();
+            
+            JOptionPane.showMessageDialog(null, "Deletado com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+        } catch (SQLException ErroSql) {
+            JOptionPane.showMessageDialog(null, "Erro ao remover: "+ErroSql, "Erro", JOptionPane.INFORMATION_MESSAGE);
+        }        
+    }
    
     public List<Projeto> ListarProjetos(){
         List<Projeto> projetos = new ArrayList<>();

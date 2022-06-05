@@ -128,6 +128,11 @@ public class telaProjetos extends javax.swing.JFrame {
         });
 
         btnExcluir.setText("Excluir Projeto");
+        btnExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExcluirActionPerformed(evt);
+            }
+        });
 
         codProjeto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -315,6 +320,23 @@ public class telaProjetos extends javax.swing.JFrame {
     private void campoProjetoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoProjetoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_campoProjetoActionPerformed
+
+    private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
+        // TODO add your handling code here:
+        Projeto projeto;
+        ProjetoDAO dao = new ProjetoDAO();
+        
+        int index = tabelaProjeto.getSelectedRow();
+        projeto = dao.ListarProjetos().get(index);
+        
+        int resposta = JOptionPane.showConfirmDialog(this, "Deseja realmente excluir projeto selecionado?", "Confirmação",
+            JOptionPane.YES_NO_OPTION);
+        if (resposta == JOptionPane.YES_OPTION) {
+            
+            dao.excluirProjeto(projeto);
+            carregaTabela();
+        }
+    }//GEN-LAST:event_btnExcluirActionPerformed
 
     /**
      * @param args the command line arguments
