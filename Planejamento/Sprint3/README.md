@@ -94,6 +94,6 @@ Neste gráfico de Burndown foi retratado o trabalho realizado pelo time.
   
   <p align="justify">Com o obejtivo de facilitar a utilização da aplciação, foi cirado um manual de intruções, o qual explica como os usuários poderão utilizar a aplicação. </p>
 
-  [Manual.pdf](https://github.com/TechDriversFatec/Pro4Tech/files/8841385/Manual.pdf)
+[Manual.pdf](https://github.com/TechDriversFatec/Pro4Tech/files/8841396/Manual.pdf)
 
 → [Voltar ao topo](#topo)
