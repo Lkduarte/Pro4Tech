@@ -89,5 +89,11 @@ Neste gráfico de Burndown foi retratado o trabalho realizado pelo time.
 
 ![burndown 2]![Backlog](https://user-images.githubusercontent.com/87658431/172077172-a17dafc2-a273-4d3c-88a3-cf463e4fb33f.png)
 
+  
+  # 📝Manual de instrução
+  
+  <p align="justify">Com o obejtivo de facilitar a utilização da aplciação, foi cirado um manual de intruções, o qual explica como os usuários poderão utilizar a aplicação. </p>
+
+  [Manual.pdf](https://github.com/TechDriversFatec/Pro4Tech/files/8841385/Manual.pdf)
 
 → [Voltar ao topo](#topo)
