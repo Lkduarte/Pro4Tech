@@ -68,12 +68,7 @@ Para darmos continuidade  ao projeto, optamos pela implementação das sugestõe
 <p align="justify">A equipe continuou o desenvolvimento do projeto com base nas informações validadas junto ao cliente, implementando as
   alterações apontadas na segunda sprint e dando continuidade no desenvolvimento das funcionalidades propostas. </p>
   
-
-
-https://user-images.githubusercontent.com/87658431/168491608-5fe5cef8-ca93-4d63-987f-b802109e1b9e.mp4
-
-
-
+https://user-images.githubusercontent.com/87658431/172076932-08240c10-9f08-423c-9c9b-707b7f043486.mp4
 
 → [Voltar ao topo](#topo)
 
@@ -90,8 +85,9 @@ Neste gráfico de Burndown foi retratado o trabalho realizado pelo time.
 <p align="justify">Foram necessárias pesquisas e estudos para a realização das tarefas.</p>
   
 
-![burndown](https://user-images.githubusercontent.com/88887821/168407127-db70d7ce-dadc-4058-a99f-fbded755027e.png)
-![burndown 2](https://user-images.githubusercontent.com/88887821/168407144-257c6f96-3b5e-47e1-a3cc-cb82947b3f41.png)
+![burndown]![Grafico](https://user-images.githubusercontent.com/87658431/172077041-7dadffa5-29e5-4094-b264-0d822c6cd5d9.png)
+
+![burndown 2]![Backlog](https://user-images.githubusercontent.com/87658431/172077172-a17dafc2-a273-4d3c-88a3-cf463e4fb33f.png)
 
 
 → [Voltar ao topo](#topo)
