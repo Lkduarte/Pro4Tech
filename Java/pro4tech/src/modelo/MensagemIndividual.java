@@ -27,7 +27,7 @@ public class MensagemIndividual {
    
 
     public MensagemIndividual(String assuntoMsgIndividual, Date dataMsgIndividual, Timestamp horaMsgIndividual, String conteudoMsgIndividual, int remetente, int usuarioId) {
-         this.assuntoMsgIndividual = assuntoMsgIndividual;
+        this.assuntoMsgIndividual = assuntoMsgIndividual;
         this.dataMsgIndividual = dataMsgIndividual;
         this.horaMsgIndividual = horaMsgIndividual;
         this.conteudoMsgIndividual = conteudoMsgIndividual;

@@ -131,55 +131,7 @@ public class UsuarioDAO {
         }
         
     }
-    
-    /*
-    public void excluirUsuario(int id){
-        String sql = "DELETE FROM usuario WHERE usuarioId = ?";
-        try {
-            
-            try(PreparedStatement stmt = connection.prepareStatement(sql)){
-                stmt.setInt(1, id);
-                stmt.executeUpdate();
-            }
-        }catch (SQLException erro){
-            throw new RuntimeException(erro);
-        } 
-    }
-    */
-
-   /* public List<Usuario> ListarUsuariosExcluir(int id){
-       List<Usuario> usuarios = new ArrayList<>();
-       String sqlSelecionarUsuario = "SELECT * FROM usuario;"; 
-       
-       try(PreparedStatement stmt = connection.prepareStatement(sqlSelecionarUsuario)){
-           
-           ResultSet rs = stmt.executeQuery();
-           
-           while(rs.next()){
-               
-                Usuario usuario = new Usuario(
-                    rs.getInt(1),
-                    rs.getString(2),
-                    rs.getString(3),
-                    rs.getString(4),
-                    rs.getString(5),
-                    rs.getString(6),
-                    rs.getInt(7),
-                    rs.getString(8),
-                    rs.getString(9),
-                    rs.getInt(10)
-                );
-               
-               usuarios.add(usuario);
-               
-            }
-       }catch (SQLException erro){
-           JOptionPane.showMessageDialog(null, erro);
-       }
-       
-       return usuarios;
-    }*/
-    
+   
     public HashMap<Usuario,Integer> getCountUsuario(int id){
         
         HashMap<Usuario,Integer> hash = new HashMap<>();
@@ -205,9 +157,6 @@ public class UsuarioDAO {
         }
         return hash;
     }
-    
-    
-    //TUDO AQUI É TESTE
     
     public boolean existeUsuario(int idUsuario){
         return ListarUsuarios().stream().anyMatch(r -> r.getUsuarioId() == idUsuario);
@@ -247,6 +196,15 @@ public class UsuarioDAO {
     }
     
     public void excluirUsuario(Usuario usuario) {
+        
+        List<MensagemIndividual> mensagem = Principal.daoCadastro.ListarMensagensUsuarios(usuario.getUsuarioId());
+        
+        if (!mensagem.isEmpty()) {
+            for(MensagemIndividual m : mensagem){
+                Principal.daoCadastro.excluirMensagemIndividual(m.getCodMensagemIndividual());
+            }
+        }
+        
         String sqlDeletar = "delete from usuario WHERE usuarioId =? and nomeUsuario = ?";
 
         try {
@@ -257,7 +215,7 @@ public class UsuarioDAO {
             
             JOptionPane.showMessageDialog(null, "Deletado com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
         } catch (SQLException ErroSql) {
-            JOptionPane.showMessageDialog(null, "Erro ao remover: "+ErroSql, "Erro", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Este usuário está em projetos ativos");
         }        
     }
     

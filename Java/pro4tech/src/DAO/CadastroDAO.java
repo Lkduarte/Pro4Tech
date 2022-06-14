@@ -93,7 +93,7 @@ public class CadastroDAO {
        return mensagens;
     }
     
-    public List<MensagemIndividual> ListarMensagensIndividual(int idEnviou, Integer idRecebeu){
+    public List<MensagemIndividual> ListarMensagensIndividual(int idEnviou, int idRecebeu){
        List<MensagemIndividual> mensagens = new ArrayList<>();
        String sqlListarMensagem = "SELECT * FROM mensagemIndividual where quemRecebeu = ? and quemEnviou = ?;";
         
@@ -142,6 +142,86 @@ public class CadastroDAO {
             throw new RuntimeException(erro);
         } 
         
+    }
+    
+    public void excluirMensagem(int id){
+        String sql = "delete from mensagem where codMensagem = ?";
+        
+        try(PreparedStatement stmt = Principal.conexao.prepareStatement(sql)){
+            
+            stmt.setInt(1, id);
+            stmt.executeUpdate();
+            
+        }catch(SQLException erro){
+            throw new RuntimeException(erro);
+        }
+    }
+    
+    public void excluirMensagemIndividual(int id){
+        String sql = "delete from mensagemIndividual where codMensagemIndividual = ?";
+        
+        try(PreparedStatement stmt = Principal.conexao.prepareStatement(sql)){
+            
+            stmt.setInt(1, id);
+            stmt.executeUpdate();
+            
+        }catch(SQLException erro){
+            throw new RuntimeException(erro);
+        }
+    }
+    
+    public List<MensagemIndividual> ListarMensagensUsuarios(int id){
+       List<MensagemIndividual> mensagens = new ArrayList<>();
+       
+       String sqlListarRecebeu = "SELECT * FROM mensagemIndividual where quemRecebeu = ?;";
+       String sqlListarEnviou = "SELECT * FROM mensagemIndividual where quemEnviou= ?;";
+        
+       try{
+            PreparedStatement stmt = Principal.conexao.prepareStatement(sqlListarRecebeu);
+            stmt.setInt(1, id);
+            ResultSet rs = stmt.executeQuery();
+
+            while(rs.next()){
+
+                 MensagemIndividual mensagem = new MensagemIndividual(
+                     rs.getInt("codMensagemIndividual"),
+                     rs.getString("assuntoMsgIndividual"),
+                     rs.getDate("dataMsgIndividual"),
+                     rs.getTimestamp("horaMsgIndividual"),
+                     rs.getString("conteudoMsgIndividual"),
+                     rs.getInt("quemEnviou"),
+                     rs.getInt("quemRecebeu")
+                 );
+
+                 mensagens.add(mensagem);
+
+             }
+            
+            PreparedStatement stmt1 = Principal.conexao.prepareStatement(sqlListarEnviou);
+            stmt1.setInt(1, id);
+            ResultSet rs1 = stmt1.executeQuery();
+
+            while(rs1.next()){
+
+                 MensagemIndividual mensagem = new MensagemIndividual(
+                     rs1.getInt("codMensagemIndividual"),
+                     rs1.getString("assuntoMsgIndividual"),
+                     rs1.getDate("dataMsgIndividual"),
+                     rs1.getTimestamp("horaMsgIndividual"),
+                     rs1.getString("conteudoMsgIndividual"),
+                     rs1.getInt("quemEnviou"),
+                     rs1.getInt("quemRecebeu")
+                 );
+
+                 mensagens.add(mensagem);
+
+             }
+           
+       }catch (SQLException erro){
+           throw new RuntimeException(erro);
+       }
+       
+       return mensagens;
     }
     
 }

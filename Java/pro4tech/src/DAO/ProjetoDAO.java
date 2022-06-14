@@ -55,8 +55,17 @@ public class ProjetoDAO {
     }
     
     public void excluirProjeto(Projeto projeto) {
+        
+        List<Mensagem> mensagem = Principal.daoCadastro.ListarMensagens(projeto.getCodProjeto());
+        
+        if (!mensagem.isEmpty()) {
+            for(Mensagem m : mensagem){
+                Principal.daoCadastro.excluirMensagem(m.getCodMensagem());
+            }
+        }
+        
         String sqlDeletar = "delete from projeto WHERE codProjeto =?";
-
+        
         try {
             PreparedStatement stmt = Principal.conexao.prepareStatement(sqlDeletar);
             stmt.setInt(1, projeto.getCodProjeto());

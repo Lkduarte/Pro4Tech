@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import javax.swing.JFileChooser;
 
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -181,13 +182,32 @@ public class telaRelatorio extends javax.swing.JFrame {
         
         try {
             
-            File file = new File("C:\\Users\\Victoria\\Desktop\\"+ dateFormat.format(data).replaceAll(" ", "") + " - relatório.txt");
+            JFileChooser chooser = new JFileChooser();
+            chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
             
-            if (!file.exists()) {
-                file.createNewFile();
+            int returnVal = chooser.showDialog(null, "Selecione");
+            
+            File file = null;
+            
+            if(returnVal == JFileChooser.APPROVE_OPTION) {
+                file = chooser.getSelectedFile();
+            }else if (returnVal == JFileChooser.CANCEL_OPTION) {
+                return;
+            }else if (returnVal == JFileChooser.ERROR_OPTION) {
+                return;
+            }
+            
+            if (file == null) {
+                return;
+            }
+            
+            File file1 = new File(file.getAbsolutePath() + "\\"+ dateFormat.format(data).replaceAll(" ", "") + " - relatório.txt");
+            
+            if (!file1.exists()) {
+                file1.createNewFile();
             }
 
-            try (FileWriter fw = new FileWriter(file.getAbsoluteFile()); BufferedWriter bw = new BufferedWriter(fw)) {
+            try (FileWriter fw = new FileWriter(file1.getAbsoluteFile()); BufferedWriter bw = new BufferedWriter(fw)) {
                     
                 bw.write("--------------------------------Relatório--------------------------------");
                 bw.write("\r\n");

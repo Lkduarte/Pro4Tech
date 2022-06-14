@@ -12,7 +12,7 @@ public class ConnectionFactory {
             //return DriverManager.getConnection("jdbc:mysql://localhost/pro4tech", "root", "Ssassasse00");
             //return DriverManager.getConnection("jdbc:mysql://localhost/pro4tech", "root", "fatec");
             //return DriverManager.getConnection("jdbc:mysql://localhost/pro4tech", "root", "fatecsjc");
-            //return DriverManager.getConnection("jdbc:mysql://localhost:3304/pro4tech", "root", "admin");
+            return DriverManager.getConnection("jdbc:mysql://localhost:3304/pro4tech", "root", "admin");
             //return DriverManager.getConnection("jdbc:mysql://localhost/pro4tech", "root", "81w*&Ykk");
         }
         catch(SQLException erro){

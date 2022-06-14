@@ -337,7 +337,7 @@ public class telaProjetos extends javax.swing.JFrame {
     private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
         // TODO add your handling code here:
         Projeto projeto;
-        ProjetoDAO dao = new ProjetoDAO();
+        ProjetoDAO dao = Principal.daoProjeto;
         
         int index = tabelaProjeto.getSelectedRow();
         projeto = dao.ListarProjetos().get(index);
